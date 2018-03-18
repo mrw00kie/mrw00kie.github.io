@@ -1,0 +1,49 @@
+
+html, body {
+	height: 720px;
+	width: 1280px;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+#game_window {
+	position: relative;
+	height: 720px;
+	width: 1280px;
+}
+
+#sidebar_left {
+	position: absolute;
+	height: 100%;
+	width: 20%;
+	left: 0;
+}
+
+#context_menu {
+	position: absolute;
+	height: 65%;
+	width: 100%;
+}
+
+#notification_box {
+	position: absolute;
+	height: 35%;
+	width: 100%;
+	bottom: 0;
+}
+
+
+#game_view {
+	position: absolute;
+	height: 100%;
+	width: 65%;
+	left: 20%;
+}
+
+#sidebar_right {
+	position: absolute;
+	height: 100%;
+	width: 15%;
+	right: 0;
+}
