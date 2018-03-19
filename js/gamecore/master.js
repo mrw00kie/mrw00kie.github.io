@@ -14,6 +14,12 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "xml/techtree.xml", true);
 xhttp.send();
 
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    var x = xmlDoc.getElementsByTagName("tech");
+    console.log(x);
+}
+
 
 function getSystemTime() { return (int)(millis() / 1000); }
 
