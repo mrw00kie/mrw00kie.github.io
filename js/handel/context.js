@@ -8,7 +8,6 @@ function context_setup(that)
 	that.createCanvas(sketch_width, sketch_height);
 }
 
-
 function context_draw(that)
 {
 	that.background(0, 0, 200);
