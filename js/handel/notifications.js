@@ -8,6 +8,7 @@ function notifications_setup(that)
 }
 
 
+
 function notifications_draw(that)
 {
 	that.background(0, 200, 0)

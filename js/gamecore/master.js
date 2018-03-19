@@ -33,8 +33,6 @@ function setup() {
 
 
 	notification_msg.push("<<INSERT TEXT HERE>>");
-
-
 }
 
 
