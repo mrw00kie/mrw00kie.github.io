@@ -1,7 +1,6 @@
 // Game Vars
 var notification_msg;
 var game_lastFrame;
-var tech_tree;
 
 // XML File Handel
 var xmlDoc;
@@ -31,6 +30,13 @@ function setup() {
 	notification_msg = new Array();
 	game_lastFrame = getSystemTime();
 	research = new research_object();
+	// get avalible avalible_techs
+	for(var i = 0; i < tech_tree.length; i++) {
+		if(checkResearchAvalible(tech_tree[i])) {
+			avalible_techs.push(tech_tree[i]);
+		}
+	}
+
 
 	notification_msg.push("<<INSERT TEXT HERE>>");
 
