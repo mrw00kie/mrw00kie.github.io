@@ -20,7 +20,10 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "xml/techtree.xml", true);
 xhttp.send();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaabf6ff83a853d3e828959a9e8429445e6576f3
 
 function getSystemTime() { return (int)(millis() / 1000); }
 
