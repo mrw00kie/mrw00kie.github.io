@@ -25,7 +25,8 @@ function research_object()
 				this.currentResearch = 0;
 				// TODO: UPDATE TECH-TREE ETC...
 				// clear avalible_techs array and repopulate it
-		}	}	}	}
+			}
+		}
 	}
 
 }

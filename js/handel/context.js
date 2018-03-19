@@ -16,17 +16,19 @@ function context_draw(that)
 	// get avalible avalible_techs
 
 	// DRAW BUTTONS
-	for(var i = 0; i < tech_tree.length; i++) {
-		if(checkResearchAvalible(tech_tree[i]) == true) {
-			var _x = 10;
-			var _y = i * 60 + 10;
+	if(tech_tree == undefined) {
+		for(var i = 0; i < tech_tree.length; i++) {
+			if(checkResearchAvalible(tech_tree[i]) == true) {
+				var _x = 10;
+				var _y = i * 60 + 10;
 
-			that.fill(200);
-			that.rect(_x, _y,  236, 50);
-			that.textSize(12);
-			that.fill(0);
-			that.text(avalible_techs[i].getAttribute('name'), _x + 5, _y + 5);
-			that.text(avalible_techs[i].getElementsByTagName('cost').innerHTML, _x + 5, _y + 15);
+				that.fill(200);
+				that.rect(_x, _y,  236, 50);
+				that.textSize(12);
+				that.fill(0);
+				that.text(avalible_techs[i].getAttribute('name'), _x + 5, _y + 5);
+				that.text(avalible_techs[i].getElementsByTagName('cost').innerHTML, _x + 5, _y + 15);
+			}
 		}
 	}
 }
