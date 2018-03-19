@@ -35,7 +35,6 @@ function setup() {
 	notification_msg.push("<<INSERT TEXT HERE>>");
 }
 
-
 function draw() {
 	if(game_lastFrame != getSystemTime()){
 		game_lastFrame = getSystemTime();
