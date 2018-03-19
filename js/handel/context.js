@@ -1,7 +1,5 @@
 
 
-
-
 function context_setup(that)
 {
 	sketch_width = document.getElementById('context_menu').offsetWidth;
