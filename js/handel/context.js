@@ -19,16 +19,25 @@ function context_draw(that)
 		var k = 0;
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
-				var _x = 10;
-				var _y = k * 60 + 10;
+				var allreadyResearched = false;
+				for(int j = 0; j < completet_research.length; j++) {
+					if(tech_tree[i].getAttribute('name') == completet_research[j]) {
+						allreadyResearched = true;
+					}
+				}
 
-				that.fill(200);
-				that.rect(_x, _y,  236, 50);
-				that.textSize(16);
-				that.fill(0);
-				that.text("Name: "+tech_tree[i].getAttribute('name'), _x + 15, _y + 25);
-				that.text("Cost:   "+tech_tree[i].getElementsByTagName('cost')[0].innerHTML, _x + 15, _y + 40);
-				k++;
+				if(allreadyResearched == false) {
+					var _x = 10;
+					var _y = k * 60 + 10;
+
+					that.fill(200);
+					that.rect(_x, _y,  236, 50);
+					that.textSize(16);
+					that.fill(0);
+					that.text("Name: "+tech_tree[i].getAttribute('name'), _x + 15, _y + 25);
+					that.text("Cost:   "+tech_tree[i].getElementsByTagName('cost')[0].innerHTML, _x + 15, _y + 40);
+					k++;
+				}
 			}
 		}
 	}
