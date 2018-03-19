@@ -25,8 +25,8 @@ function context_draw(that)
 				that.rect(_x, _y,  236, 50);
 				that.textSize(16);
 				that.fill(0);
-				that.text("Name: "+tech_tree[i].getAttribute('name'), _x + 5, _y + 25);
-				that.text("Cost: "+tech_tree[i].getElementsByTagName('cost')[0].innerHTML, _x + 5, _y + 40);
+				that.text("Name: "+tech_tree[i].getAttribute('name'), _x + 15, _y + 25);
+				that.text("Cost:   "+tech_tree[i].getElementsByTagName('cost')[0].innerHTML, _x + 15, _y + 40);
 			}
 		}
 	}
@@ -34,7 +34,19 @@ function context_draw(that)
 
 function context_mousePressed()
 {
-
+	if(mouseX > 10 && mouseX < 246) {
+		for(var i = 0; i < tech_tree.length; i++) {
+			if(checkResearchAvalible(tech_tree[i]) == true) {
+				var _y = i * 60 + 10;
+				//that.rect(_x, _y,  236, 50);
+				if(mouseY > _y && mouseY < _y + 50){
+					console.log("in box");
+					console.log(tech_tree[i].getAttribute('name'));
+					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
+				}
+			}
+		}
+	}
 }
 
 function checkResearchAvalible(node)
