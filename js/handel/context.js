@@ -28,7 +28,7 @@ function checkResearchAvalible(node)
 {
 	var node_name = node.getAttribute('name');
 	console.log(node_name);
-	var dependencies = xmlDoc.getElementsByTagName('depends');
+	var dependencies = node.getElementsByTagName('depends');
 
 	if(dependencies.length == 0){
 		console.log("No dependencies");
