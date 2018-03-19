@@ -12,8 +12,6 @@ function context_draw(that)
 {
 	that.background(0, 0, 200);
 
-	// get avalible avalible_techs
-
 	// DRAW BUTTONS
 	if(tech_tree != undefined) {
 		for(var i = 0; i < tech_tree.length; i++) {
