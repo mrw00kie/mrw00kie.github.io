@@ -13,8 +13,17 @@ function context_draw(that)
 {
 	that.background(0, 0, 200);
 
+	// get avalible avalible_techs
+	if(avalible_techs.length == 0) {
+		for(var i = 0; i < tech_tree.length; i++) {
+			if(checkResearchAvalible(tech_tree[i])) {
+				avalible_techs.push(tech_tree[i]);
+			}
+		}
+	}
+
 	// DRAW BUTTONS
-	for(int i = 0; i < avalible_techs.length; i++) {
+	for(var i = 0; i < avalible_techs.length; i++) {
 		var _x = 10;
 		var _y = i * 60 + 10;
 
