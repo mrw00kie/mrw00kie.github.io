@@ -35,9 +35,11 @@ function context_draw(that)
 function context_mousePressed()
 {
 	if(mouseX > 10 && mouseX < 246) {
+		var k = 0;
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
-				var _y = i * 60 + 10;
+				var _y = k * 60 + 10;
+				console.log(_y + "||" + _y - 50);
 				//that.rect(_x, _y,  236, 50);
 				console.log(mouseY);
 
@@ -45,6 +47,8 @@ function context_mousePressed()
 					console.log(tech_tree[i].getAttribute('name'));
 					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
 				}
+
+				k++;
 			}
 		}
 	}
