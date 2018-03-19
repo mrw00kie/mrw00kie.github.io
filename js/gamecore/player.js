@@ -1,7 +1,6 @@
 var tech_tree;
 var completet_research = new Array();
 
-
 function research_object()
  {
 	this.researchPoints = 1;

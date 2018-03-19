@@ -6,6 +6,7 @@ var game_lastFrame;
 var xmlDoc;
 var xhttp = new XMLHttpRequest();
 
+
 function myFunction(xml) {
     xmlDoc = xml.responseXML;
     tech_tree = xmlDoc.getElementsByTagName("tech");
@@ -19,6 +20,7 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "xml/techtree.xml", true);
 xhttp.send();
+
 
 
 var research;
