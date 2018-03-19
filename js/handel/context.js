@@ -37,10 +37,10 @@ function context_draw(that)
 					{
 						var cost__ = parseInt(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, 10);
 
-						console.log(map(cost__, cost__, 0, 0, 100, true));
+						//console.log(map(research.currentResearch, cost__, 0, 0, 100, true));
 
 						that.fill(0, 150, 0);
-						that.rect(_x, _y,  map(cost__, cost__, 0, 0, 236), 50);
+						that.rect(_x, _y,  map(research.currentResearch, cost__, 0, 0, 236), 50);
 					}
 
 					that.textSize(16);
