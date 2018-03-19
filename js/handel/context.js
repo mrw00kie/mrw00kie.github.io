@@ -37,8 +37,9 @@ function context_mousePressed()
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _y = i * 60 + 10;
 				//that.rect(_x, _y,  236, 50);
+				console.log(mouseY);
+				
 				if(mouseY > _y && mouseY < _y + 50 - 720){
-					console.log("in box");
 					console.log(tech_tree[i].getAttribute('name'));
 					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
 				}
