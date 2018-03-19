@@ -1,6 +1,7 @@
 // Game Vars
 var notification_msg;
 var game_lastFrame;
+var tech_tree;
 
 //
 var research;
@@ -9,8 +10,8 @@ var xhttp = new XMLHttpRequest();
 
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("tech");
-    console.log(x);
+    tech_tree = xmlDoc.getElementsByTagName("tech");
+    console.log(tech_tree);
 }
 
 xhttp.onreadystatechange = function() {
