@@ -35,21 +35,14 @@ function context_draw(that)
 
 function context_mousePressed()
 {
-	console.log(mouseY);
-
 	if(mouseX > 10 && mouseX < 246) {
 		var k = 0;
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _y = (0 - 720) + (k * 60 + 10);
-				console.log(_y);
-				console.log(_y+50);
-
-				//that.rect(_x, _y,  236, 50);
 
 				if(mouseY > _y  && mouseY < _y + 50){
-					console.log(tech_tree[i].getAttribute('name'));
-					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
+					research.setResearch(tech_tree[i].getAttribute('name'), Nummber(tech_tree[i].getElementsByTagName('cost')[0].innerHTML));
 				}
 				k++;
 			}
