@@ -5,7 +5,14 @@ var game_lastFrame;
 //
 var research;
 
-var xhttp;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		myFunction(this);
+	}
+};
+xhttp.open("GET", "xml/techtree.xml", true);
+xhttp.send();
 
 
 function getSystemTime() { return (int)(millis() / 1000); }
@@ -19,14 +26,6 @@ function setup() {
 	notification_msg.push("<<INSERT TEXT HERE>>");
 
 
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	        myFunction(this);
-	    }
-	};
-	xhttp.open("GET", "xml/techtree.xml", true);
-	xhttp.send();
 }
 
 
