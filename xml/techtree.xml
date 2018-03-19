@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<technologies>
+	<!-- FIRST ROW -->
+	<tech name="11">
+		<cost>20</cost>
+	</tech>
+	<tech name="12">
+		<cost>35</cost>
+	</tech>
+	<tech name="13">
+		<cost>20</cost>
+	</tech>
+
+	<!-- SECOND ROW -->
+	<tech name="21">
+		<depends>11</depends>
+		<depends>12</depends>
+		<cost>55</cost>
+	</tech>
+	<tech name="22">
+		<depends>12</depends>
+		<cost>25</cost>
+	</tech>
+	<tech name="23">
+		<depends>13</depends>
+		<cost>25</cost>
+	</tech>
+
+	<!-- THIRD ROW -->
+	<tech name="31">
+		<depends>21</depends>
+		<cost>60</cost>
+	</tech>
+	<tech name="32">
+		<depends>21</depends>
+		<cost>40</cost>
+	</tech>
+	<tech name="33">
+		<depends>22</depends>
+		<depends>23</depends>
+		<cost>65</cost>
+	</tech>
+
+	<!-- FOURTH ROW -->
+	<tech name="41">
+		<depends>31</depends>
+		<depends>32</depends>
+		<depends>33</depends>
+		<cost>120</cost>
+	</tech>
+</technologies>

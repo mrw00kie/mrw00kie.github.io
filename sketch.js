@@ -1,17 +1,3 @@
-var notification_msg;
-
-function setup() {
-	notification_msg = new Array();
-
-	notification_msg.push("Notification 1");
-	notification_msg.push("Notification 2");
-	notification_msg.push("Notification 3");
-	notification_msg.push("Notification 4");
-}
-
-function draw() {
-
-}
 
 window.onload = function(){
 
@@ -20,14 +6,15 @@ window.onload = function(){
 		var sketch_height;
 
 		that.setup = function(){
-			sketch_width = document.getElementById('context_menu').offsetWidth;
-			sketch_height = document.getElementById('context_menu').offsetHeight;
-
-			that.createCanvas(sketch_width, sketch_height);
+			context_setup(that);
 		}
 
 		that.draw = function(){
-			that.background(0, 0, 200);
+			context_draw(that);
+		}
+
+		that.mousePressed = function() {
+			context_mousePressed();
 		}
 	};
 
@@ -36,42 +23,15 @@ window.onload = function(){
 		var sketch_height;
 
 		that.setup = function(){
-			sketch_width = document.getElementById('notification_box').offsetWidth;
-			sketch_height = document.getElementById('notification_box').offsetHeight;
-
-			that.createCanvas(sketch_width, sketch_height);
+			notifications_setup(that);
 		}
 
 		that.draw = function(){
-			that.background(0, 200, 0)
-
-			for(var i = 0; i < notification_msg.length; i++)
-			{
-				var _x = 10;
-				var _y = i * 121 + 10;
-
-				that.fill(200);
-				if(mouseY > _y-252 && mouseY < _y-141 && notification_msg.length >= 1 && mouseX > 10 && mouseX < 246) {
-					that.fill(180);
-				}
-				that.rect(_x, _y, 236, 111, 4);
-
-				that.fill(0);
-				that.textSize(16);
-				that.text(notification_msg[i], _x + 5, _y + 20);
-			}
+			notifications_draw(that);
 		}
 
 		that.mousePressed = function() {
-			if(mouseX > 10 && mouseX < 246)
-			{
-				if(mouseY > -121 && mouseY < -10 && notification_msg.length >= 2) {
-					notification_msg.splice(1, 1);
-				}
-				if(mouseY > -242 && mouseY < -131 && notification_msg.length >= 1) {
-					notification_msg.splice(0, 1);
-				}
-			}
+			notifications_mousePressed();
 		}
 	};
 
@@ -80,14 +40,15 @@ window.onload = function(){
 		var sketch_height;
 
 		that.setup = function(){
-			sketch_width = document.getElementById('game_view').offsetWidth;
-			sketch_height = document.getElementById('game_view').offsetHeight;
-
-			that.createCanvas(sketch_width, sketch_height);
+			gameview_setup(that);
 		}
 
 		that.draw = function(){
-			that.background(200, 0, 0);
+			gameview_draw(that);
+		}
+
+		that.mousePressed = function() {
+			gameview_mousePressed();
 		}
 	};
 
@@ -96,14 +57,14 @@ window.onload = function(){
 		var sketch_height;
 
 		that.setup = function(){
-			sketch_width = document.getElementById('sidebar_right').offsetWidth;
-			sketch_height = document.getElementById('sidebar_right').offsetHeight;
-
-			that.createCanvas(sketch_width, sketch_height);
+			sidebar_setup(that);
 		}
 
 		that.draw = function(){
-			that.background(0, 200, 200);
+			sidebar_draw(that);
+		}
+		that.mousePressed = function() {
+			sidebar_mousePressed();
 		}
 	};
 
