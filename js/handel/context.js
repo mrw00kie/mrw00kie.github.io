@@ -31,7 +31,6 @@ function context_draw(that)
 	}
 }
 
-
 function context_mousePressed()
 {
 	if(mouseX > 10 && mouseX < 246) {
@@ -50,7 +49,6 @@ function context_mousePressed()
 		}
 	}
 }
-
 
 function checkResearchAvalible(node)
 {
