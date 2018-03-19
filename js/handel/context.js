@@ -16,7 +16,7 @@ function context_draw(that)
 	// get avalible avalible_techs
 
 	// DRAW BUTTONS
-	if(tech_tree == undefined) {
+	if(tech_tree != undefined) {
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _x = 10;
