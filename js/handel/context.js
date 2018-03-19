@@ -1,5 +1,6 @@
 
 
+
 function context_setup(that)
 {
 	sketch_width = document.getElementById('context_menu').offsetWidth;
@@ -41,7 +42,7 @@ function context_mousePressed()
 
 				if(mouseY > _y + 720 && mouseY < _y - 50 + 720){
 					console.log(tech_tree[i].getAttribute('name'));
-					//console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
+					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
 				}
 			}
 		}
