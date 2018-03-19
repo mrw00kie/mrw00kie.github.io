@@ -49,13 +49,22 @@ function context_mousePressed()
 	if(mouseX > 10 && mouseX < 246) {
 		var k = 0;
 		for(var i = 0; i < tech_tree.length; i++) {
-			if(checkResearchAvalible(tech_tree[i]) == true) {
-				var _y = (0 - 720) + (k * 60 + 10);
 
-				if(mouseY > _y  && mouseY < _y + 50){
-					research.setResearch(tech_tree[i].getAttribute('name'), parseInt(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, 10));
+			var allreadyResearched = false;
+			for(int j = 0; j < completet_research.length; j++) {
+				if(tech_tree[i].getAttribute('name') == completet_research[j]) {
+					allreadyResearched = true;
 				}
-				k++;
+			}
+			if(allreadyResearched == false) {
+				if(checkResearchAvalible(tech_tree[i]) == true) {
+					var _y = (0 - 720) + (k * 60 + 10);
+
+					if(mouseY > _y  && mouseY < _y + 50){
+						research.setResearch(tech_tree[i].getAttribute('name'), parseInt(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, 10));
+					}
+					k++;
+				}
 			}
 		}
 	}
