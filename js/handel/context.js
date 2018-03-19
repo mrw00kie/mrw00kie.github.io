@@ -31,6 +31,15 @@ function context_draw(that)
 
 					that.fill(200);
 					that.rect(_x, _y,  236, 50);
+
+					// is current Research
+					if(tech_tree[i].getAttribute('name') == research.currentResearchName)
+					{
+						var cost__ = parseInt(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, 10);
+						that.fill(0, 150, 0);
+						that.rect(_x, _y,  map(cost__, cost__, 0, 0, 236), 50);
+					}
+
 					that.textSize(16);
 					that.fill(0);
 					that.text("Name: "+tech_tree[i].getAttribute('name'), _x + 15, _y + 25);
