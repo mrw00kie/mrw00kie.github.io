@@ -27,8 +27,8 @@ function context_draw(that)
 				that.rect(_x, _y,  236, 50);
 				that.textSize(12);
 				that.fill(0);
-				that.text(tech_tree[i].getAttribute('name'), _x + 5, _y + 5);
-				that.text(tech_tree[i].getElementsByTagName('cost').innerHTML, _x + 5, _y + 15);
+				that.text(tech_tree[i].getAttribute('name'), _x + 5, _y + 15);
+				that.text(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, _x + 5, _y + 35);
 			}
 		}
 	}
