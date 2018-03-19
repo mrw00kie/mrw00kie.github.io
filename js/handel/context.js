@@ -41,6 +41,7 @@ function context_mousePressed()
 				console.log(_y);
 				//that.rect(_x, _y,  236, 50);
 
+
 				if(mouseY > _y  && mouseY < _y - 50){
 					console.log(tech_tree[i].getAttribute('name'));
 					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
