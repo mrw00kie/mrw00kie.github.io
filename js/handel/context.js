@@ -29,14 +29,26 @@ function checkResearchAvalible(node)
 	var node_name = node.getAttribute('name');
 	var dependencies = xmlDoc.getElementsByTagName('depends');
 
+	if(dependencies.length == 0){
+		console.log("No dependencies");
+		return true;
+	}
+
 	for(var i = 0; i < dependencies.length; i++) {
 		var dependencie_researched = false;
+		if(completet_research.length == 0) {
+			return false;
+		}
 		for(var j = 0; j < completet_research.length; j++) {
-			if(dependencies[i].innerHTML == completet_research[j]) {
+			if(dependencies[i].innerHTML == completet_research[j] && completet_research[j] != NULL) {
+				console.log(dependencies[i].innerHTML);
+				console.log(completet_research[j]);
 				dependencie_researched = true;
 				break;
 			}
-			if(!dependencie_researched) {
+			if(dependencie_researched) {
+			}
+			else {
 				return false;
 			}
 		}
