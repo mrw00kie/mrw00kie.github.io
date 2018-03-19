@@ -38,12 +38,12 @@ function checkResearchAvalible(node)
 		if(completet_research.length == 0) {
 			return false;
 		}
-		for(var j = 0; j < completet_research.length; j++) {
+		for(var k = 0; k < completet_research.length; k++) {
 			console.log(dependencies[i].innerHTML);
-			console.log(completet_research[j]);
-			if(dependencies[i].innerHTML == completet_research[j]) {
+			console.log(completet_research[k]);
+
+			if(dependencies[i].innerHTML == completet_research[k]) {
 				dependencie_researched = true;
-				break;
 			}
 			if(dependencie_researched) {
 			}
