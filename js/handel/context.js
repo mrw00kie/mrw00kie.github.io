@@ -20,7 +20,7 @@ function context_draw(that)
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var allreadyResearched = false;
-				for(int j = 0; j < completet_research.length; j++) {
+				for(var j = 0; j < completet_research.length; j++) {
 					if(tech_tree[i].getAttribute('name') == completet_research[j]) {
 						allreadyResearched = true;
 					}
@@ -51,7 +51,7 @@ function context_mousePressed()
 		for(var i = 0; i < tech_tree.length; i++) {
 
 			var allreadyResearched = false;
-			for(int j = 0; j < completet_research.length; j++) {
+			for(var j = 0; j < completet_research.length; j++) {
 				if(tech_tree[i].getAttribute('name') == completet_research[j]) {
 					allreadyResearched = true;
 				}
