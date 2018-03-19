@@ -3,10 +3,8 @@ var notification_msg;
 var game_lastFrame;
 var tech_tree;
 
+// XML File Handel
 var xmlDoc;
-//
-var research;
-
 var xhttp = new XMLHttpRequest();
 
 function myFunction(xml) {
@@ -23,7 +21,8 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "xml/techtree.xml", true);
 xhttp.send();
 
-
+//
+var research;
 
 function getSystemTime() { return (int)(millis() / 1000); }
 
