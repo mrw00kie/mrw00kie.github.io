@@ -32,6 +32,7 @@ function context_draw(that)
 	}
 }
 
+
 function context_mousePressed()
 {
 	console.log(mouseY);
@@ -55,6 +56,7 @@ function context_mousePressed()
 		}
 	}
 }
+
 
 function checkResearchAvalible(node)
 {

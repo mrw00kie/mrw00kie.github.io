@@ -1,6 +1,5 @@
 
 window.onload = function(){
-
 	var contextSketch = function(that){
 		var sketch_width;
 		var sketch_height;

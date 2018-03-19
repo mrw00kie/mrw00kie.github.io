@@ -7,6 +7,7 @@ function notifications_setup(that)
 	that.createCanvas(sketch_width, sketch_height);
 }
 
+
 function notifications_draw(that)
 {
 	that.background(0, 200, 0)
@@ -27,6 +28,7 @@ function notifications_draw(that)
 		that.text(notification_msg[i], _x + 5, _y + 20);
 	}
 }
+
 
 function notifications_mousePressed()
 {

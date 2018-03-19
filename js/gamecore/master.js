@@ -7,6 +7,7 @@ var xmlDoc;
 var xhttp = new XMLHttpRequest();
 
 
+
 function myFunction(xml) {
     xmlDoc = xml.responseXML;
     tech_tree = xmlDoc.getElementsByTagName("tech");
