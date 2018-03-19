@@ -16,8 +16,8 @@ function context_draw(that)
 
 	// DRAW BUTTONS
 	if(tech_tree != undefined) {
+		var k = 0;
 		for(var i = 0; i < tech_tree.length; i++) {
-			var k = 0;
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _x = 10;
 				var _y = k * 60 + 10;
@@ -44,7 +44,7 @@ function context_mousePressed()
 				var _y = (0 - 720) + (k * 60 + 10);
 
 				if(mouseY > _y  && mouseY < _y + 50){
-					research.setResearch(tech_tree[i].getAttribute('name'), Nummber(tech_tree[i].getElementsByTagName('cost')[0].innerHTML));
+					research.setResearch(tech_tree[i].getAttribute('name'), parseInt(tech_tree[i].getElementsByTagName('cost')[0].innerHTML, 10));
 				}
 				k++;
 			}
