@@ -39,7 +39,7 @@ function context_mousePressed()
 				//that.rect(_x, _y,  236, 50);
 				console.log(mouseY);
 
-				if(mouseY > _y && mouseY < _y + 50 - 720){
+				if(mouseY > _y + 720 && mouseY < _y - 50 + 720){
 					console.log(tech_tree[i].getAttribute('name'));
 					//console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
 				}
