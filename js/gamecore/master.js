@@ -5,17 +5,18 @@ var game_lastFrame;
 //
 var research;
 
+var xhttp = new XMLHttpRequest();
+
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("tech");
     console.log(x);
 }
 
-var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		myFunction(this);
-	}
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
 };
 xhttp.open("GET", "xml/techtree.xml", true);
 xhttp.send();
