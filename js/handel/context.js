@@ -38,6 +38,7 @@ function context_mousePressed()
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _y = 0 - (k * 60 + 10);
+				console.log(_y);
 				//that.rect(_x, _y,  236, 50);
 
 				if(mouseY > _y  && mouseY < _y - 50){
