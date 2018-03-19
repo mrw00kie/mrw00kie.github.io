@@ -53,7 +53,6 @@ function context_mousePressed()
 	}
 }
 
-
 function checkResearchAvalible(node)
 {
 	// Returns True if TECH is available
