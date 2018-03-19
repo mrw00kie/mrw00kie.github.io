@@ -39,7 +39,6 @@ function checkResearchAvalible(node)
 			return false;
 		}
 		for(var k = 0; k < completet_research.length; k++) {
-			console.log(dependencies[i].innerHTML);
 			console.log(completet_research[k]);
 
 			if(dependencies[i].innerHTML == completet_research[k]) {
