@@ -27,6 +27,7 @@ function context_mousePressed()
 function checkResearchAvalible(node)
 {
 	var node_name = node.getAttribute('name');
+	console.log(node_name);
 	var dependencies = xmlDoc.getElementsByTagName('depends');
 
 	if(dependencies.length == 0){
@@ -37,6 +38,7 @@ function checkResearchAvalible(node)
 	for(var i = 0; i < dependencies.length; i++) {
 		var dependencie_researched = false;
 		if(completet_research.length == 0) {
+			console.log("dependencies but nothing researched yet");
 			return false;
 		}
 		for(var j = 0; j < completet_research.length; j++) {
@@ -49,6 +51,7 @@ function checkResearchAvalible(node)
 			if(dependencie_researched) {
 			}
 			else {
+				console.log("dependencie not researched yet");
 				return false;
 			}
 		}
