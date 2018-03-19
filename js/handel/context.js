@@ -38,13 +38,14 @@ function context_mousePressed()
 		for(var i = 0; i < tech_tree.length; i++) {
 			if(checkResearchAvalible(tech_tree[i]) == true) {
 				var _y = k * 60 + 10;
-				console.log(_y + "||" + _y - 50);
+				console.log(_y);
+				console.log(_y - 50);
 				//that.rect(_x, _y,  236, 50);
 				console.log(mouseY);
 
 				if(mouseY > _y + 720 && mouseY < _y - 50 + 720){
-					console.log(tech_tree[i].getAttribute('name'));
-					console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
+					//console.log(tech_tree[i].getAttribute('name'));
+					//console.log(tech_tree[i].getElementsByTagName('cost')[0].innerHTML);
 				}
 				k++;
 			}
