@@ -23,7 +23,6 @@ function context_mousePressed()
 
 }
 
-
 function checkResearchAvalible(node)
 {
 	var node_name = node.getAttribute('name');
