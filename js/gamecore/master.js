@@ -3,13 +3,14 @@ var notification_msg;
 var game_lastFrame;
 var tech_tree;
 
+var xmlDoc;
 //
 var research;
 
 var xhttp = new XMLHttpRequest();
 
 function myFunction(xml) {
-    var xmlDoc = xml.responseXML;
+    xmlDoc = xml.responseXML;
     tech_tree = xmlDoc.getElementsByTagName("tech");
     console.log(tech_tree);
 }
