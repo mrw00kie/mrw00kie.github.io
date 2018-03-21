@@ -26,8 +26,8 @@ xhttp.send();
 
 function setup() {
 	// wait while loading xml
-	while(xml_techtree != undefined)
-	{}
+	//while(xml_techtree != undefined)
+	//{}
 
 	console.log(xml_techtree);
 
