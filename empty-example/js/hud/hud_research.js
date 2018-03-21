@@ -14,8 +14,8 @@ function setup_research_selection()
 	element_research_box.id('element_research_box');
 	element_research_box.style('position', 'relative');
 	element_research_box.style('background-color', 'gray');
-	element_research_box.style('width', '300px');
-	element_research_box.style('height', '200px');
+	element_research_box.style('width', '350px');
+	element_research_box.style('height', '170px');
 	element_research_box.style('top', '5px');
 	element_research_box.style('left', '5px');
 
