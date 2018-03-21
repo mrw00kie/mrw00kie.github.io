@@ -2,34 +2,18 @@ var list_research_id;
 var list_research_info;
 
 
-// XML GET REQUEST FOR TECHNOLOGIES
-var xhttp = new XMLHttpRequest();
-var xml_techtree;
+var xml;
+var xml_technologie_tree;
 
-function myFunction(xml) {
-    var xmlDoc = xml.responseXML;
-    xml_techtree = xmlDoc.getElementsByTagName("tech");
+function preload() {
+	xml = loadXML('xml/technologie.xml');
 }
-
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-    }
-};
-xhttp.open("GET", "xml/technologie.xml", true);
-xhttp.send();
-
-
-
-
 
 
 function setup() {
-	// wait while loading xml
-	//while(xml_techtree != undefined)
-	//{}
 
-	console.log(xml_techtree);
+	xml_technologie_tree = xml.getChildren('tech');
+	console.log(xml_technologie_tree);
 
 	can = createCanvas(1280, 720);
 	can.parent('game');
