@@ -9,7 +9,6 @@ var xml_techtree;
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     xml_techtree = xmlDoc.getElementsByTagName("tech");
-    console.log(tech_tree);
 }
 
 xhttp.onreadystatechange = function() {
