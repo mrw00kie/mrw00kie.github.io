@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<technologies>
+	<!-- FIRST ROW -->
+	<tech name="ION_DRIVE">
+		<description>The ION Drive is an advanced thruster that uses charged particles insted of solid/liquid fuel.</description>
+		<cost>20</cost>
+	</tech>
+	<tech name="SATALITES">
+		<description>A computer in the erth's orbit. Used for data transmission and GPS.</description>
+		<cost>35</cost>
+	</tech>
+	<tech name="QUANTUM_COMPUTERS">
+		<description>A compuster working at the speed of light and it uses the unique propertys of quantum Particles.</description>
+		<cost>20</cost>
+	</tech>
+
+	<!-- SECOND ROW -->
+	<tech name="ADVANCED_ROCKETRY">
+		<description>More complex and advanced Rockets that have an higher effiency and a longer reach.</description>
+		<depends>ION_DRIVE</depends>
+		<depends>SATALITES</depends>
+		<cost>55</cost>
+	</tech>
+	<tech name="COMPUTER_NETWORKS">
+		<description>Giant networks of computers for faster computation and for more complex tasks.</description>
+		<depends>SATALITES</depends>
+		<cost>25</cost>
+	</tech>
+	<tech name="ARTIFICAL_INTELLIGENCE">
+		<description>The computer starts to think by itself and make dessicions.</description>
+		<depends>QUANTUM_COMPUTERS</depends>
+		<cost>25</cost>
+	</tech>
+
+	<!-- THIRD ROW -->
+	<tech name="ANTI_MATTER">
+		<description>Just a few grams are enough to accelerate to 20% of light speed, a very powerfull fuel</description>
+		<depends>ADVANCED_ROCKETRY</depends>
+		<cost>60</cost>
+	</tech>
+	<tech name="SPACE_COLONIES">
+		<description>Your civilization spreads its wings and start building bases on other space bodys.</description>
+		<depends>ADVANCED_ROCKETRY</depends>
+		<cost>40</cost>
+	</tech>
+	<tech name="AUTONIMUS_FACTORYS">
+		<description>A factory working by itself. Cheaper and more efficent production.</description>
+		<depends>COMPUTER_NETWORKS</depends>
+		<depends>ARTIFICAL_INTELLIGENCE</depends>
+		<cost>65</cost>
+	</tech>
+
+	<!-- FOURTH ROW -->
+	<tech name="WARP_DRIVE">
+		<description>Traveling faster then light. Start reaching into other galaxies and solarsystems. Time to conquer the Universe!</description>
+		<depends>ANTI_MATTER</depends>
+		<depends>SPACE_COLONIES</depends>
+		<depends>AUTONIMUS_FACTORYS</depends>
+		<cost>120</cost>
+	</tech>
+</technologies>

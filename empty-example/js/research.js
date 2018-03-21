@@ -16,8 +16,8 @@ function setup_research_selection()
 	element_research_box.style('background-color', 'gray');
 	element_research_box.style('width', '300px');
 	element_research_box.style('height', '200px');
-	element_research_box.style('top', '50px');
-	element_research_box.style('left', '50px');
+	element_research_box.style('top', '5px');
+	element_research_box.style('left', '5px');
 
 	// RESEARCH COMMIT BUTTON
 	element_research_bttn = createElement('button', 'Start Research');
