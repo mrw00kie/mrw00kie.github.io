@@ -86,10 +86,16 @@ function research_start()
 {
 	var selected_ = dropdown_research_selection.value();
 
+	if(selected_ == "EMPTY")
+		return false;
+
 	for(var i = 0; i < 6; i++) {
 		if(selected_ == list_research_id[i]) {
 			// Start RESEARCH
 			console.log(String(selected_) + " was started and costs " + String(list_research_cost[i]));
+			game_research.setResearch(selected_, list_research_cost[i]);
+			return true;
 		}
 	}
+	return false;
 }

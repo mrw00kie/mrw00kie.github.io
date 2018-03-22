@@ -1,4 +1,34 @@
 
+function research_object()
+ {
+	this.researchRate = 1;
+	this.currentResearch = 0;
+	this.currentResearchID = "";
+
+	this.modifyResearch = function(amount) { this.researchRate += amount; }
+	this.setResearch = function(id_, cost_) {
+		this.currentResearchName = id_;
+		this.currentResearch = cost_;
+	}
+	this.updateCurrentResearch = function() {
+		if(this.currentResearch <= 0){
+			// NOTIFY PLAYER
+			console.log("finished " + this.currentResearchID);
+			// research is done !
+			list_completed_research.push(this.currentResearchID);
+			this.currentResearchID = "";
+			this.currentResearch = 0;
+			// TODO: UPDATE TECH-TREE ETC...
+			getAvalibleResearch();
+			update_research_selection();
+		}
+
+		if(this.currentResearchName != "")
+			this.currentResearch -= this.researchPoints;
+	}
+
+}
+
 function getAvalibleResearch()
 {
 	// Clear Arrays

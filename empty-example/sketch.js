@@ -7,6 +7,12 @@ var list_research_cost;
 var xml;
 var xml_technologie_tree;
 
+// Game Variables
+var game_research;
+var game_lastFrame;
+
+function getSystemTime() { return (int)(millis() / 1000); }
+
 
 
 function preload() {
@@ -33,11 +39,22 @@ function setup() {
 		list_research_cost[i] = 0;
 	}
 
+	// Game Variables
+	game_research = new research_object();
+	game_lastFrame = getSystemTime();
+
 
 	getAvalibleResearch();
 	setup_research_selection();
 }
 
 function draw()  {
+	if(game_lastFrame != getSystemTime()){
+		game_lastFrame = getSystemTime();
+		// Only once Per Second
+		//console.log(getSystemTime()); // Game Time
+		game_research.updateCurrentResearch();
+	}
+	// 60 - times per second
 	can.background(51);
 }
