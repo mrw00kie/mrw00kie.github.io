@@ -1,4 +1,5 @@
 
+
 function research_object()
  {
 	this.researchRate = 1;

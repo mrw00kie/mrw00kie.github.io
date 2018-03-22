@@ -54,7 +54,7 @@ function setup_notifications_box()
 
 	// Notifications Bttn 2
 	element_notifications_bttn_2 = createElement('Button','OK');
-	element_notifications_bttn_2.parent('element_notifications_textbox_2')
+	element_notifications_bttn_2.parent('element_notifications_textbox_2');
 	element_notifications_bttn_1.style('position', 'relative');
 	element_notifications_bttn_2.style('right', '5px');
 	element_notifications_bttn_2.style('bottom', '5px');
@@ -64,6 +64,7 @@ function setup_notifications_box()
 	var element_notifications_text_1 = createElement('p');
 	element_notifications_text_1.id('element_notifications_text_1');
 	element_notifications_text_1.parent('element_notifications_textbox_1');
+	element_notifications_text_1.style('position', 'relative');
 	element_notifications_text_1.style('right', '10px');
 	element_notifications_text_1.style('top', '10px');
 
@@ -71,6 +72,7 @@ function setup_notifications_box()
 	var element_notifications_text_2 = createElement('p');
 	element_notifications_text_2.id('element_notifications_text_2');
 	element_notifications_text_2.parent('element_notifications_textbox_2');
+	element_notifications_text_2.style('position', 'relative');
 	element_notifications_text_2.style('right', '10px');
 	element_notifications_text_2.style('top', '10px');
 
