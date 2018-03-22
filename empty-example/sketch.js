@@ -10,8 +10,6 @@ var xml;
 var xml_technologie_tree;
 
 
-
-
 function preload() {
 	xml = loadXML('xml/technologie.xml');
 }

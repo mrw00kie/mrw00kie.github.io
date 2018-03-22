@@ -32,7 +32,6 @@ var object_research = function()
 			}
 		}
 	}
-
 }
 
 
