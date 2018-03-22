@@ -4,8 +4,6 @@ var list_research_info;
 var list_completed_research;
 var list_research_cost;
 
-var game_research_object;
-
 var xml;
 var xml_technologie_tree;
 
@@ -34,8 +32,6 @@ function setup() {
 		list_research_cost[i] = 0;
 	}
 
-	// Game Variables
-	game_research_object = new object_research();
 
 	getAvalibleResearch();
 	setup_research_selection();

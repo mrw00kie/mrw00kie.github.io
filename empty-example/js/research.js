@@ -1,40 +1,6 @@
 
 
 
-var object_research = function()
-{
-	this.currentResearchID = "";
-	this.researchSecond = 1;
-	this.currentResearchCost = 0;
-
-	this.updateResearchRate = function(amount) {
-		this.researchSecond += amount;
-	}
-
-	this.setNewResearch = function(_id, _cost) {
-		console.log("Set research to '" + _id + "' and it costs " + String(_cost));
-
-		this.currentResearchID = _id;
-		this.currentResearchCost = _cost;
-	}
-
-	this.updateResearch = function() {
-		if(this.currentResearchID != "") {
-			this.currentResearchCost -= this.researchSecond;
-			if(this.currentResearchCost == 0) {
-				// FINISHED RESEARCH
-				list_completed_research.push(this.currentResearchID);
-				this.currentResearchID = "";
-				this.currentResearchCost = 0;
-
-				getAvalibleResearch();
-				update_research_selection();
-			}
-		}
-	}
-}
-
-
 function getAvalibleResearch()
 {
 	// Clear Arrays
