@@ -24,7 +24,7 @@ function setup_notifications_box()
 
 	// DIV Text Body 1
 	element_notifications_textbox_1 = createElement('div');
-	element_notifications_textbox_1.parent('element_notifications_box');
+	element_notifications_textbox_1.parent(element_notifications_box);
 	element_notifications_textbox_1.id('element_notifications_textbox_1');
 	element_notifications_textbox_1.style('position', 'relative');
 	element_notifications_textbox_1.style('background-color', 'white');
@@ -35,7 +35,7 @@ function setup_notifications_box()
 
 	// DIV Text Body 1
 	element_notifications_textbox_2 = createElement('div');
-	element_notifications_textbox_2.parent('element_notifications_box');
+	element_notifications_textbox_2.parent(element_notifications_box);
 	element_notifications_textbox_2.id('element_notifications_textbox_2');
 	element_notifications_textbox_2.style('position', 'relative');
 	element_notifications_textbox_2.style('background-color', 'white');
@@ -45,17 +45,19 @@ function setup_notifications_box()
 	element_notifications_textbox_2.style('left', '5px');
 
 	// Notifications Bttn 1
-	element_notifications_bttn_1 = createElement('Button','OK');
-	element_notifications_bttn_1.parent('element_notifications_textbox_1');
+	element_notifications_bttn_1 = createElement('button','OK');
+	element_notifications_bttn_1.parent(element_notifications_textbox_1);
+	element_notifications_bttn_1.id('element_notifications_bttn_1');
 	element_notifications_bttn_1.style('position', 'relative');
 	element_notifications_bttn_1.style('right', '5px');
 	element_notifications_bttn_1.style('bottom', '5px');
 	element_notifications_bttn_1.mouseClicked(bttn_notifications_1);
 
 	// Notifications Bttn 2
-	element_notifications_bttn_2 = createElement('Button','OK');
-	element_notifications_bttn_2.parent('element_notifications_textbox_2');
-	element_notifications_bttn_1.style('position', 'relative');
+	element_notifications_bttn_2 = createElement('button','OK');
+	element_notifications_bttn_2.parent(element_notifications_textbox_2);
+	element_notifications_bttn_2.id('element_notifications_bttn_2');
+	element_notifications_bttn_2.style('position', 'relative');
 	element_notifications_bttn_2.style('right', '5px');
 	element_notifications_bttn_2.style('bottom', '5px');
 	element_notifications_bttn_2.mouseClicked(bttn_notifications_2);
@@ -63,7 +65,7 @@ function setup_notifications_box()
 	// text 1
 	var element_notifications_text_1 = createElement('p');
 	element_notifications_text_1.id('element_notifications_text_1');
-	element_notifications_text_1.parent('element_notifications_textbox_1');
+	element_notifications_text_1.parent(element_notifications_textbox_1);
 	element_notifications_text_1.style('position', 'relative');
 	element_notifications_text_1.style('right', '10px');
 	element_notifications_text_1.style('top', '10px');
@@ -71,7 +73,7 @@ function setup_notifications_box()
 	// text 2
 	var element_notifications_text_2 = createElement('p');
 	element_notifications_text_2.id('element_notifications_text_2');
-	element_notifications_text_2.parent('element_notifications_textbox_2');
+	element_notifications_text_2.parent(element_notifications_textbox_2);
 	element_notifications_text_2.style('position', 'relative');
 	element_notifications_text_2.style('right', '10px');
 	element_notifications_text_2.style('top', '10px');
@@ -83,7 +85,7 @@ function setup_notifications_box()
 function update_notification_text()
 {
 	var _text_0 = document.getElementById("element_notifications_text_1");
-	var _text_1 = document.getElementById("element_notifications_textbox_2");
+	var _text_1 = document.getElementById("element_notifications_text_2");
 
 	_text_0.innerHTML = "";
 	_text_1.innerHTML = "";
