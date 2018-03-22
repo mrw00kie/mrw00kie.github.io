@@ -11,20 +11,21 @@ function research_object()
 		this.currentResearch = cost_;
 	}
 	this.updateCurrentResearch = function() {
-		if(this.currentResearch <= 0){
-			// NOTIFY PLAYER
-			console.log("finished " + this.currentResearchID);
-			// research is done !
-			list_completed_research.push(this.currentResearchID);
-			this.currentResearchID = "";
-			this.currentResearch = 0;
-			// TODO: UPDATE TECH-TREE ETC...
-			getAvalibleResearch();
-			update_research_selection();
-		}
-
-		if(this.currentResearchName != "")
+		if(this.currentResearchName != "") {
 			this.currentResearch -= this.researchRate;
+
+			if(this.currentResearch <= 0) {
+				// NOTIFY PLAYER
+				console.log("finished " + this.currentResearchID);
+				// research is done !
+				list_completed_research.push(this.currentResearchID);
+				this.currentResearchID = "";
+				this.currentResearch = 0;
+				// TODO: UPDATE TECH-TREE ETC...
+				getAvalibleResearch();
+				update_research_selection();
+			}
+		}
 
 		console.log(this.currentResearch);
 	}
