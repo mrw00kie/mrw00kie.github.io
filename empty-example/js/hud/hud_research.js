@@ -7,6 +7,7 @@ var element_research_text;
 var dropdown_research_selection;
 
 
+
 function update_research_selection() {
 	var _dropdown = document.getElementById("dropdown_research_selection");
 
@@ -15,7 +16,6 @@ function update_research_selection() {
 		_dropdown.options[i].innerHTML =  list_research_id[i];
 	}
 }
-
 
 function setup_research_selection()
 {

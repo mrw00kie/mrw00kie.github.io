@@ -1,6 +1,5 @@
 
 
-
 function getAvalibleResearch()
 {
 	// Clear Arrays
