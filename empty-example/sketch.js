@@ -68,5 +68,5 @@ function draw()  {
 		game_research.updateCurrentResearch();
 	}
 	// 60 - times per second
-	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100);
+	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100, 100);
 }
