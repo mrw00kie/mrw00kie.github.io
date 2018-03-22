@@ -28,6 +28,7 @@ function setup() {
 	list_research_id = new Array();
 	list_research_info = new Array();
 	list_completed_research = new Array();
+	list_research_cost = new Array();
 
 	for(var i = 0; i < 6; i++) {
 		list_research_id[i] = "EMPTY";
