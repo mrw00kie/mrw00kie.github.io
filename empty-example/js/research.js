@@ -7,7 +7,7 @@ function research_object()
 
 	this.modifyResearch = function(amount) { this.researchRate += amount; }
 	this.setResearch = function(id_, cost_) {
-		this.currentResearchName = id_;
+		this.currentResearchID = id_;
 		this.currentResearch = cost_;
 	}
 	this.updateCurrentResearch = function() {
