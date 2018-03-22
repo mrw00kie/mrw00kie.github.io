@@ -37,7 +37,8 @@ function research_object()
 		}
 	}
 
-	this.getTimeLeft = function() {
+	this.getTimeLeft = function,
+	() {
 		if(this.currentResearch == 0)
 			return 0;
 		return floor(this.currentResearch/this.researchRate);

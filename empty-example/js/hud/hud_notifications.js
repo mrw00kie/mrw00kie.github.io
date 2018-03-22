@@ -19,7 +19,7 @@ function setup_notifications_box()
 	element_notifications_box.style('background-color', 'gray');
 	element_notifications_box.style('width', '350px');
 	element_notifications_box.style('height', '170px');
-	element_notifications_box.style('top', '180px');
+	element_notifications_box.style('bottom', '5px');
 	element_notifications_box.style('left', '5px');
 
 	// DIV Text Body 1
