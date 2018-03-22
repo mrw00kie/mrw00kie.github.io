@@ -9,7 +9,6 @@ var element_notifications_bttn_1;
 var element_notifications_bttn_2;
 
 
-
 function setup_notifications_box()
 {
 	// DIV Main Body
