@@ -52,7 +52,7 @@ function setup() {
 
 	getAvalibleResearch();
 	setup_research_selection();
-	
+
 	setup_notifications_box();
 	update_notification_text();
 }
@@ -66,5 +66,5 @@ function draw()  {
 		game_research.updateCurrentResearch();
 	}
 	// 60 - times per second
-	can.background(51);
+	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100, cos(getSystemTime())*100 - sin(getSystemTime())*100);
 }
