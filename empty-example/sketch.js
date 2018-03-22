@@ -34,7 +34,7 @@ function setup() {
 	}
 
 
-	//getAvalibleResearch();
+	getAvalibleResearch();
 	setup_research_selection();
 }
 
