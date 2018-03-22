@@ -1,6 +1,7 @@
 
 
 
+
 var object_research = function()
 {
 	this.currentResearchID = "";

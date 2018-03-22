@@ -14,7 +14,6 @@ function preload() {
 	xml = loadXML('xml/technologie.xml');
 }
 
-
 function setup() {
 
 	xml_technologie_tree = xml.getChildren('tech');
