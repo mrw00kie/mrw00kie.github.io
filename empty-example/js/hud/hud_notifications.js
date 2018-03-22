@@ -31,7 +31,7 @@ function setup_notifications_box()
 	element_notifications_textbox_1.style('background-color', 'white');
 	element_notifications_textbox_1.style('width', '340px');
 	element_notifications_textbox_1.style('height', '70px');
-	element_notifications_textbox_1.style('bottom', '5px');
+	element_notifications_textbox_1.style('top', '5px');
 	element_notifications_textbox_1.style('left', '5px');
 
 	// DIV Text Body 1
@@ -46,15 +46,17 @@ function setup_notifications_box()
 	element_notifications_textbox_2.style('left', '5px');
 
 	// Notifications Bttn 1
-	element_notifications_bttn_1 = createElement('Button','X');
-	element_notifications_bttn_1.parent('element_notifications_textbox_1')
+	element_notifications_bttn_1 = createElement('Button','OK');
+	element_notifications_bttn_1.parent('element_notifications_textbox_1');
+	element_notifications_bttn_1.style('position', 'relative');
 	element_notifications_bttn_1.style('right', '5px');
 	element_notifications_bttn_1.style('bottom', '5px');
 	element_notifications_bttn_1.mouseClicked(bttn_notifications_1);
 
 	// Notifications Bttn 2
-	element_notifications_bttn_2 = createElement('Button','X');
+	element_notifications_bttn_2 = createElement('Button','OK');
 	element_notifications_bttn_2.parent('element_notifications_textbox_2')
+	element_notifications_bttn_1.style('position', 'relative');
 	element_notifications_bttn_2.style('right', '5px');
 	element_notifications_bttn_2.style('bottom', '5px');
 	element_notifications_bttn_2.mouseClicked(bttn_notifications_2);
