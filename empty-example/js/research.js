@@ -1,7 +1,6 @@
 
 
 
-
 var object_research = function()
 {
 	this.currentResearchID = "";
@@ -34,7 +33,6 @@ var object_research = function()
 		}
 	}
 }
-
 
 function getAvalibleResearch()
 {

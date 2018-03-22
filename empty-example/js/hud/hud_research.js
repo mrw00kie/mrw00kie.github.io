@@ -56,7 +56,6 @@ function setup_research_selection()
 }
 
 
-
 function update_research_info()
 {
 	var selected_ = dropdown_research_selection.value();
