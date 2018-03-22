@@ -8,6 +8,12 @@ var dropdown_research_selection;
 
 function setup_research_selection()
 {
+	// REMOVE BODYS FIRST
+	element_research_bttn.remove();
+	element_research_box.remove();
+	element_research_text.remove();
+	dropdown_research_selection.remove();
+
 	// DIV BODY RESEARCH
 	element_research_box = createElement('div');
 	element_research_box.parent('game');
@@ -29,7 +35,7 @@ function setup_research_selection()
 	element_research_bttn.mouseClicked(research_start);
 
 	// RESEARCH INFO TEXT
-	element_research_text = createElement('p');
+	element_research_text = createElement('p', list_research_info[0]);
 	element_research_text.id('element_research_text');
 	element_research_text.parent(element_research_box);
 	element_research_text.style('position', 'relative');
@@ -71,4 +77,14 @@ function research_start()
 {
 	var selected_ = dropdown_research_selection.value();
 	console.log(String(selected_) + " was started");
+
+	var __index = 0;
+	var dropd = document.getElementById("dropdown_research_selection");
+	for(var i = 0; i < 6; i++) {
+		if(dropd.options[i].value == selected_) {
+			__index = i;
+		}
+	}
+
+	game_research_object.setNewResearch(selected_, list_research_cost[__index]);
 }

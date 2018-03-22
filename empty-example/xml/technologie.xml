@@ -11,7 +11,7 @@
 	</tech>
 	<tech name="QUANTUM_COMPUTERS">
 		<description>A compuster working at the speed of light and it uses the unique propertys of quantum Particles.</description>
-		<cost>20</cost>
+		<cost>25</cost>
 	</tech>
 
 	<!-- SECOND ROW -->

@@ -1,9 +1,16 @@
+// Research Variables
 var list_research_id;
 var list_research_info;
 var list_completed_research;
+var list_research_cost;
+
+var game_research_object;
 
 var xml;
 var xml_technologie_tree;
+
+
+
 
 function preload() {
 	xml = loadXML('xml/technologie.xml');
@@ -13,7 +20,6 @@ function preload() {
 function setup() {
 
 	xml_technologie_tree = xml.getChildren('tech');
-	console.log(xml_technologie_tree);
 
 	can = createCanvas(1280, 720);
 	can.parent('game');
@@ -24,10 +30,13 @@ function setup() {
 	list_completed_research = new Array();
 
 	for(var i = 0; i < 6; i++) {
-		list_research_id[i] = "EMPTY " + String(i);
-		list_research_info[i] = "This is a example 'Info Text' for a specific Research, Number "
-									+ String(i);
+		list_research_id[i] = "EMPTY";
+		list_research_info[i] = "";
+		list_research_cost[i] = 0;
 	}
+
+	// Game Variables
+	game_research_object = new object_research();
 
 	getAvalibleResearch();
 
