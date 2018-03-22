@@ -48,6 +48,7 @@ function setup() {
 	setup_research_selection();
 }
 
+
 function draw()  {
 	if(game_lastFrame != getSystemTime()){
 		game_lastFrame = getSystemTime();

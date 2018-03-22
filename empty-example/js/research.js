@@ -28,7 +28,6 @@ function research_object()
 
 		console.log(this.currentResearch);
 	}
-
 }
 
 function getAvalibleResearch()

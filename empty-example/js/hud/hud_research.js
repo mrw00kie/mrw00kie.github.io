@@ -7,7 +7,6 @@ var element_research_text;
 var dropdown_research_selection;
 
 
-
 function update_research_selection() {
 	var dropd = document.getElementById("dropdown_research_selection");
 	for(var i = 0; i < 6; i++) {
@@ -15,7 +14,6 @@ function update_research_selection() {
 		dropd.options[i].innerHTML =  list_research_id[i];
 	}
 }
-
 
 function setup_research_selection()
 {
@@ -80,7 +78,6 @@ function update_research_info()
 		}
 	}
 }
-
 
 function research_start()
 {
