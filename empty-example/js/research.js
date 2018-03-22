@@ -26,7 +26,6 @@ function research_object()
 				update_research_selection();
 			}
 		}
-
 		console.log(this.currentResearch);
 	}
 }
