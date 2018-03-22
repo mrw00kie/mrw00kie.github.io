@@ -34,6 +34,7 @@ var object_research = function()
 	}
 }
 
+
 function getAvalibleResearch()
 {
 	// Clear Arrays

@@ -64,6 +64,7 @@ function update_research_info()
 	}
 }
 
+
 function research_start()
 {
 	var selected_ = dropdown_research_selection.value();
