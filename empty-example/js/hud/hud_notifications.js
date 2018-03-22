@@ -76,7 +76,6 @@ function setup_notifications_box()
 	element_notifications_text_2.style('top', '5px');
 }
 
-
 function update_notification_text()
 {
 	var _text_0 = document.getElementById("element_notifications_text_1");
