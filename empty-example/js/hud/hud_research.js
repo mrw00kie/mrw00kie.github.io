@@ -8,7 +8,7 @@ var dropdown_research_selection;
 
 
 function update_research_selection() {
-	var _dropdown = document.getElementById('dropdown_research_selection');
+	var _dropdown = document.getElementById("dropdown_research_selection");
 
 	for(var i = 0; i < 6; i++) {
 		_dropdown.options[i].value = list_research_id[i];
@@ -53,6 +53,11 @@ function setup_research_selection()
 	for(var i = 0; i < 6; i++) {
 		dropdown_research_selection.option(list_research_id[i]);
 	}
+	var _dropdown = document.getElementById("dropdown_research_selection");
+	for(var i = 0; i < 6; i++) {
+		_dropdown.options[i].id = "dropdown_research_selection" + String(i);
+	}
+
 	dropdown_research_selection.changed(update_research_info);
 	dropdown_research_selection.parent(element_research_box);
 	dropdown_research_selection.style('position', 'relative');
