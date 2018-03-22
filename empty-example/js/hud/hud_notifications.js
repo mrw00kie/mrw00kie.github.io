@@ -13,7 +13,7 @@ function setup_notifications_box()
 {
 	// DIV Main Body
 	element_notifications_box = createElement('div');
-	element_research_box.parent('game');
+	element_notifications_box.parent('game');
 	element_notifications_box.id('element_notifications_box');
 	element_notifications_box.style('position', 'relative');
 	element_notifications_box.style('background-color', 'gray');
@@ -33,7 +33,7 @@ function setup_notifications_box()
 	element_notifications_textbox_1.style('top', '5px');
 	element_notifications_textbox_1.style('left', '5px');
 
-	// DIV Text Body 1
+	// DIV Text Body 2
 	element_notifications_textbox_2 = createElement('div');
 	element_notifications_textbox_2.parent(element_notifications_box);
 	element_notifications_textbox_2.id('element_notifications_textbox_2');
@@ -63,36 +63,33 @@ function setup_notifications_box()
 	element_notifications_bttn_2.mouseClicked(bttn_notifications_2);
 
 	// text 1
-	var element_notifications_text_1 = createElement('p');
+	var element_notifications_text_1 = createElement('p', ' ');
 	element_notifications_text_1.id('element_notifications_text_1');
 	element_notifications_text_1.parent(element_notifications_textbox_1);
 	element_notifications_text_1.style('position', 'relative');
-	element_notifications_text_1.style('right', '10px');
-	element_notifications_text_1.style('top', '10px');
+	element_notifications_text_1.style('left', '5px');
+	element_notifications_text_1.style('top', '5px');
 
 	// text 2
-	var element_notifications_text_2 = createElement('p');
+	var element_notifications_text_2 = createElement('p', ' ');
 	element_notifications_text_2.id('element_notifications_text_2');
 	element_notifications_text_2.parent(element_notifications_textbox_2);
 	element_notifications_text_2.style('position', 'relative');
-	element_notifications_text_2.style('right', '10px');
-	element_notifications_text_2.style('top', '10px');
+	element_notifications_text_2.style('left', '5px');
+	element_notifications_text_2.style('top', '5px');
 }
 
 
 function update_notification_text()
 {
-	var _text_0 = document.getElementById("element_notifications_text_1");
-	var _text_1 = document.getElementById("element_notifications_text_2");
-
-	_text_0.innerHTML = "";
-	_text_1.innerHTML = "";
+	document.getElementById("element_notifications_text_1").innerHTML = "";
+	document.getElementById("element_notifications_text_2").innerHTML = "";
 
 	if(list_notifications_text.length >= 1) {
-		_text_0.innerHTML = list_notifications_text[0];
+		document.getElementById("element_notifications_text_1").innerHTML = list_notifications_text[0];
 	}
 	if(list_notifications_text.length >= 2)
-		_text_1.innerHTML = list_notifications_text[1];
+		document.getElementById("element_notifications_text_2").innerHTML = list_notifications_text[1];
 }
 
 function bttn_notifications_1()
