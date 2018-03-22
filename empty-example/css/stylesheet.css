@@ -12,3 +12,9 @@ html, body {
 	left: 0px;
 	background-color: grey;
 }
+
+#navigation_bar {
+	position: relative;
+	top: 23px;
+	left: 0px;
+}
