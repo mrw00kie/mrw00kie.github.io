@@ -38,7 +38,6 @@ function setup() {
 	game_research_object = new object_research();
 
 	getAvalibleResearch();
-
 	setup_research_selection();
 }
 

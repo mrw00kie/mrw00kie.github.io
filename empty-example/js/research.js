@@ -28,7 +28,7 @@ var object_research = function()
 				this.currentResearchCost = 0;
 
 				getAvalibleResearch();
-				setup_research_selection();
+				update_research_selection();
 			}
 		}
 	}
