@@ -16,6 +16,7 @@ function update_research_selection() {
 	}
 }
 
+
 function setup_research_selection()
 {
 	// DIV BODY RESEARCH
