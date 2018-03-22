@@ -55,6 +55,8 @@ function setup() {
 
 	setup_notifications_box();
 	update_notification_text();
+
+	colorMode(HSB, 100);
 }
 
 
@@ -66,5 +68,5 @@ function draw()  {
 		game_research.updateCurrentResearch();
 	}
 	// 60 - times per second
-	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100, cos(getSystemTime())*100 - sin(getSystemTime())*100);
+	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100);
 }
