@@ -14,6 +14,7 @@ var game_lastFrame;
 function getSystemTime() { return (int)(millis() / 1000); }
 
 
+
 function preload() {
 	xml = loadXML('xml/technologie.xml');
 }

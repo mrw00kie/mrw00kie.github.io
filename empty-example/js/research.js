@@ -30,7 +30,6 @@ function research_object()
 	}
 }
 
-
 function getAvalibleResearch()
 {
 	// Clear Arrays
