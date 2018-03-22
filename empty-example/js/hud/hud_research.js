@@ -9,9 +9,13 @@ var dropdown_research_selection;
 function setup_research_selection()
 {
 	// REMOVE BODYS FIRST
-	element_research_bttn.remove();
+	if(element_research_bttn != undefined)
+		element_research_bttn.remove();
+	if(element_research_box != undefined)
 	element_research_box.remove();
-	element_research_text.remove();
+	if(element_research_text != undefined)
+		element_research_text.remove();
+	if(dropdown_research_selection != undefined)
 	dropdown_research_selection.remove();
 
 	// DIV BODY RESEARCH
