@@ -22,7 +22,6 @@ function preload() {
 
 
 function setup() {
-
 	xml_technologie_tree = xml.getChildren('tech');
 
 	can = createCanvas(1280, 720);
