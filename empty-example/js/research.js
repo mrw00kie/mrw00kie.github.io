@@ -27,9 +27,20 @@ function research_object()
 				// TODO: UPDATE TECH-TREE ETC...
 				getAvalibleResearch();
 				update_research_selection();
+
+				document.getElementById("element_research_bttn").innerHTML = "Start Research";
+			}
+			else {
+				console.log(this.currentResearch);
+				document.getElementById("element_research_bttn").innerHTML = this.getTimeLeft();
 			}
 		}
-		console.log(this.currentResearch);
+	}
+
+	this.getTimeLeft() {
+		if(this.currentResearch == 0)
+			return 0;
+		return floor(this.currentResearch/this.researchRate);
 	}
 }
 

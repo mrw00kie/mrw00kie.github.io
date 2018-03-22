@@ -37,6 +37,8 @@ function setup_research_selection()
 	element_research_bttn.style('position', 'relative');
 	element_research_bttn.style('top', '10px');
 	element_research_bttn.style('right', '10px');
+	element_research_bttn.style('width', '105px');
+	element_research_bttn.style('height', '21px');
 	element_research_bttn.mouseClicked(research_start);
 
 	// RESEARCH INFO TEXT
