@@ -58,7 +58,7 @@ function setup_research_selection()
 	}
 
 	dropdown_research_selection.changed(update_research_info);
-	dropdown_research_selection.parent(element_research_box);
+	dropdown_research_selection.parent('element_research_box');
 	dropdown_research_selection.style('position', 'relative');
 	dropdown_research_selection.style('top', '10px');
 	dropdown_research_selection.style('left', '10px');
