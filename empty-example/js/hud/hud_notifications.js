@@ -77,8 +77,6 @@ function setup_notifications_box()
 	element_notifications_text_2.style('position', 'relative');
 	element_notifications_text_2.style('right', '10px');
 	element_notifications_text_2.style('top', '10px');
-
-	update_notification_text();
 }
 
 

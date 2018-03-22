@@ -52,7 +52,9 @@ function setup() {
 
 	getAvalibleResearch();
 	setup_research_selection();
+	
 	setup_notifications_box();
+	update_notification_text();
 }
 
 
