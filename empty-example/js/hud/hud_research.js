@@ -90,7 +90,7 @@ function research_start()
 		if(selected_ == list_research_id[i]) {
 			// Start RESEARCH
 			console.log(String(selected_) + " was started and costs " + String(list_research_cost[i]));
-			game_research.setResearch(selected_, list_research_cost[i]);
+			game_research.setResearch(String(selected_), list_research_cost[i]);
 			return true;
 		}
 	}
