@@ -49,12 +49,15 @@ function setup_research_selection()
 	// RESEARCH DROPDOWN SELECTION
 	dropdown_research_selection = createSelect();
 	dropdown_research_selection.id('dropdown_research_selection');
-	for(var i = 0; i < 6; i++) {
-		dropdown_research_selection.option(list_research_id[i]);
+	for(var i = 0; i < 6; i++)
+	{
+		dropdown_research_selection.option('a'+String(i));
 	}
 	var dropd = document.getElementById("dropdown_research_selection");
 	for(var i = 0; i < 6; i++) {
 		dropd.options[i].id = "dropdown_research_option_"+String(i);
+		dropd.options[i].value = list_research_id[i];
+		dropd.options[i].innerHTML = list_research_id[i];
 	}
 
 	dropdown_research_selection.changed(update_research_info);
