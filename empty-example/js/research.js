@@ -12,7 +12,7 @@ function research_object()
 		this.currentResearch = cost_;
 	}
 	this.updateCurrentResearch = function() {
-		if(this.currentResearchName != "") {
+		if(this.currentResearchID != "") {
 			this.currentResearch -= this.researchRate;
 
 			if(this.currentResearch <= 0) {

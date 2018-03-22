@@ -20,7 +20,6 @@ function preload() {
 }
 
 
-
 function setup() {
 	xml_technologie_tree = xml.getChildren('tech');
 
