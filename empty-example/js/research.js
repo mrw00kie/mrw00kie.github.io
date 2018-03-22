@@ -24,7 +24,9 @@ function research_object()
 		}
 
 		if(this.currentResearchName != "")
-			this.currentResearch -= this.researchPoints;
+			this.currentResearch -= this.researchRate;
+
+		console.log(this.currentResearch);
 	}
 
 }
