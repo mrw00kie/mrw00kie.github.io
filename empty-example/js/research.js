@@ -16,6 +16,8 @@ function research_object()
 
 			if(this.currentResearch <= 0) {
 				// NOTIFY PLAYER
+				list_notifications_text.push("Research for "+this.currentResearchID+" has finished!");
+				update_notification_text();
 				console.log("finished " + this.currentResearchID);
 				// research is done !
 				list_completed_research.push(this.currentResearchID);

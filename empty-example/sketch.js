@@ -7,6 +7,9 @@ var list_research_cost;
 var xml;
 var xml_technologie_tree;
 
+// Notifications Box Variables
+var list_notifications_text;
+
 // Game Variables
 var game_research;
 var game_lastFrame;
@@ -38,6 +41,10 @@ function setup() {
 		list_research_cost[i] = 0;
 	}
 
+	// Notifications Box Variables
+	list_notifications_text = new Array();
+	list_notifications_text.push("Welcome! Lead your Civilizastion to great power.");
+
 	// Game Variables
 	game_research = new research_object();
 	game_lastFrame = getSystemTime();
@@ -45,6 +52,7 @@ function setup() {
 
 	getAvalibleResearch();
 	setup_research_selection();
+	setup_notifications_box();
 }
 
 
