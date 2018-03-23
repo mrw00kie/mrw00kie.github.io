@@ -88,7 +88,7 @@ function draw()  {
 		game_research.updateCurrentResearch();
 	}
 	// 60 - times per second
-	can.background(sat);
+	can.background(sat, 0, 50);
 
 	if(mode)
 		sat--;
