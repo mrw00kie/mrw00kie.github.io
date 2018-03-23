@@ -69,6 +69,7 @@ html, body {
 
 #navigation_money_value, #navigation_research_value, #navigation_production_value, #navigation_power_value, #navigation_materials_value {
 	position: relative;
+	margin: 0px;
 	left: 30px;
-	top: 0px;
+	top: 3px;
 }
