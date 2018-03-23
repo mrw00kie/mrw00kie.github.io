@@ -79,7 +79,6 @@ function setup() {
 	mode = false;
 }
 
-
 function draw()  {
 	if(game_lastFrame != getSystemTime()){
 		game_lastFrame = getSystemTime();

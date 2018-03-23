@@ -35,7 +35,6 @@ function update_navigation_bar() {
 	dropd.options[4].innerHTML = "None";
 }
 
-
 function update_navigation_selection() {
 	var selected_ = dropdown_navigation_selection.value();
 	if(selected_ == 'dropdown_navigation_research') {
