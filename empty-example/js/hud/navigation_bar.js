@@ -9,7 +9,7 @@ function update_navigation_bar() {
 	document.getElementById("navigation_materials_value").innerHTML = String(recource_materials);
 
 
-	dropdown_navigation_selection = createElement();
+	dropdown_navigation_selection = createSelect();
 	dropdown_navigation_selection.parent('navigation_bar');
 	dropdown_navigation_selection.style('position', 'relative');
 	dropdown_navigation_selection.style('left', '400px');
