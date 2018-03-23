@@ -10,6 +10,11 @@ var xml_technologie_tree;
 // Notifications Box Variables
 var list_notifications_text;
 
+// Resource Variables
+var recource_money;
+var recource_crystals;
+var recource_metals;
+
 // Game Variables
 var game_research;
 var game_lastFrame;

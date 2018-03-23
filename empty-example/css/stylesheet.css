@@ -18,3 +18,34 @@ html, body {
 	top: 0px;
 	left: 0px;
 }
+
+#navigation_money {
+	position: relative;
+	top: 1px;
+	left: 640px;
+	margin: 0px;
+}
+#navigation_research {
+	position: relative;
+	top: 1px;
+	left: 768px;
+	margin: 0px;
+}
+#navigation_production {
+	position: relative;
+	top: 1px;
+	left: 896px;
+	margin: 0px;
+}
+#navigation_crystals {
+	position: relative;
+	top: 1px;
+	left: 1024px;
+	margin: 0px;
+}
+#navigation_crystals {
+	position: relative;
+	top: 1px;
+	left: 1152px;
+	margin: 0px;
+}
