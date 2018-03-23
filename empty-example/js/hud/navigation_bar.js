@@ -10,19 +10,23 @@ function update_navigation_bar() {
 
 
 	dropdown_navigation_selection = createElement();
-	dropdown_navigation_selection.parent(navigation_bar);
+	dropdown_navigation_selection.parent('navigation_bar');
 	dropdown_navigation_selection.style('position', 'relative');
 	dropdown_navigation_selection.style('left', '400px');
 	dropdown_navigation_selection.style('top', '2px');
 	dropdown_navigation_selection.id('dropdown_navigation_selection');
-	dropdown_navigation_selection.option('dropdown_navigation_research', 'Research');
-	dropdown_navigation_selection.option('dropdown_navigation_buildings', 'Buildings');
-	dropdown_navigation_selection.option('dropdown_navigation_units', 'Units');
-	dropdown_navigation_selection.option('dropdown_navigation_materials', 'Materials');
+	dropdown_navigation_selection.option('dropdown_navigation_research');
+	dropdown_navigation_selection.option('dropdown_navigation_buildings');
+	dropdown_navigation_selection.option('dropdown_navigation_units');
+	dropdown_navigation_selection.option('dropdown_navigation_materials');
 
 	var dropd = document.getElementById("dropdown_navigation_selection");
-	for(var i = 0; i < 4; i++) {
-		dropd.options[i].id = "dropdown_navigation_option_"+String(i);
-	}
-
+	dropd.options[0].id = "dropdown_navigation_option_research";
+	dropd.options[0].innerHTML = "Research";
+	dropd.options[1].id = "dropdown_navigation_option_buildings";
+	dropd.options[1].innerHTML = "Buildings";
+	dropd.options[2].id = "dropdown_navigation_option_units";
+	dropd.options[2].innerHTML = "Units";
+	dropd.options[3].id = "dropdown_navigation_option_materials";
+	dropd.options[3].innerHTML = "Materials";
 }
