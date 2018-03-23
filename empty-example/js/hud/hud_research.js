@@ -16,7 +16,6 @@ function update_research_selection() {
 	}
 }
 
-
 function setup_research_selection()
 {
 	// DIV BODY RESEARCH
@@ -68,7 +67,6 @@ function setup_research_selection()
 	dropdown_research_selection.style('top', '10px');
 	dropdown_research_selection.style('left', '10px');
 }
-
 
 function update_research_info()
 {

@@ -19,6 +19,7 @@ html, body {
 	left: 0px;
 }
 
+
 #navigation_money {
 	position: absolute;
 	top: 1px;
@@ -61,12 +62,12 @@ html, body {
 
 }
 
+
 #icon_money, #icon_research, #icon_production, #icon_power, #icon_materials {
 	position: absolute;
 	left: 0px;
 	top: 0px;
 }
-
 #navigation_money_value, #navigation_research_value, #navigation_production_value, #navigation_power_value, #navigation_materials_value {
 	position: relative;
 	margin: 0px;
