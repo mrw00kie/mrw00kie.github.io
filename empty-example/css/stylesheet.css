@@ -20,32 +20,40 @@ html, body {
 }
 
 #navigation_money {
-	position: relative;
+	position: absolute;
 	top: 1px;
 	left: 640px;
+	width: 128px;
 	margin: 0px;
 }
 #navigation_research {
-	position: relative;
+	position: absolute;
 	top: 1px;
 	left: 768px;
+	width: 128px;
 	margin: 0px;
 }
 #navigation_production {
-	position: relative;
+	position: absolute;
 	top: 1px;
 	left: 896px;
 	margin: 0px;
+	width: 128px;
+
 }
 #navigation_crystals {
-	position: relative;
+	position: absolute;
 	top: 1px;
 	left: 1024px;
 	margin: 0px;
+	width: 128px;
+
 }
 #navigation_crystals {
-	position: relative;
+	position: absolute;
 	top: 1px;
 	left: 1152px;
 	margin: 0px;
+	width: 128px;
+
 }
