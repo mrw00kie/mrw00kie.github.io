@@ -12,8 +12,8 @@ var list_notifications_text;
 
 // Resource Variables
 var recource_money;
-var recource_crystals;
-var recource_metals;
+var recource_power;
+var recource_materials;
 
 // Production Variables
 
@@ -64,8 +64,8 @@ function setup() {
 
 	//setup Recource Variables
 	recource_money = 10;
-	recource_crystals = 2;
-	recource_metals = 2;
+	recource_power = 2;
+	recource_materials = 2;
 
 
 	getAvalibleResearch();
