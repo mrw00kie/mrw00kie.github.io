@@ -23,6 +23,10 @@ function preload() {
 }
 
 
+// DEBUG CANVIS COLOR
+var sat;
+var mode;
+
 function setup() {
 	xml_technologie_tree = xml.getChildren('tech');
 
@@ -56,7 +60,8 @@ function setup() {
 	setup_notifications_box();
 	update_notification_text();
 
-	colorMode(HSB, 100);
+	sat = 0;
+	mode = false;
 }
 
 
@@ -68,5 +73,15 @@ function draw()  {
 		game_research.updateCurrentResearch();
 	}
 	// 60 - times per second
-	can.background(cos(getSystemTime())*100, sin(getSystemTime())*100, 100);
+	can.background(sat);
+
+	if(mode)
+		sat--;
+	else
+		sat++;
+
+	if(sat == 255)
+		mode = true;
+	if(sat == 0)
+		mode = false;
 }
