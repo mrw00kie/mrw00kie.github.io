@@ -20,7 +20,6 @@ function update_navigation_bar() {
 	dropdown_navigation_selection.option('dropdown_navigation_units');
 	dropdown_navigation_selection.option('dropdown_navigation_materials');
 
-
 	var dropd = document.getElementById("dropdown_navigation_selection");
 	dropd.options[0].id = "dropdown_navigation_option_research";
 	dropd.options[0].innerHTML = "Research";
