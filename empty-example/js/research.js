@@ -1,7 +1,6 @@
 
 
-function research_object()
- {
+function research_object() {
 	this.researchRate = 1;
 	this.currentResearch = 0;
 	this.currentResearchID = "";

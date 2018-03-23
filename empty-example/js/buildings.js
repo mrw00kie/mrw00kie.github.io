@@ -1,6 +1,5 @@
 
 
-function research_object()
-{
+function research_object() {
 	this.productionRate = 2;
 }
