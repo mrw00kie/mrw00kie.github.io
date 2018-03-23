@@ -15,8 +15,11 @@ var recource_money;
 var recource_crystals;
 var recource_metals;
 
+// Production Variables
+
 // Game Variables
 var game_research;
+var game_productuion;
 var game_lastFrame;
 
 function getSystemTime() { return (int)(millis() / 1000); }
@@ -56,6 +59,7 @@ function setup() {
 
 	// Game Variables
 	game_research = new research_object();
+	game_productuion = new productuion_object();
 	game_lastFrame = getSystemTime();
 
 
