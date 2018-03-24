@@ -37,7 +37,7 @@ function setup_building_selection()
 	dropdown_buildings_selection.style('top', '40px');
 	dropdown_buildings_selection.style('right', '10px');
 	dropdown_buildings_selection.style('width', '330px');
-	dropdown_buildings_selection.style('height', '260px');
+	dropdown_buildings_selection.style('height', '250px');
 	// create options
 	for(var i = 0; i < list_buildings_id.length; i++) {
 		dropdown_buildings_selection.option('b'+String(i));
@@ -63,7 +63,7 @@ function update_Buildings_select()
 	dropdown_buildings_selection.style('top', '40px');
 	dropdown_buildings_selection.style('right', '10px');
 	dropdown_buildings_selection.style('width', '330px');
-	dropdown_buildings_selection.style('height', '260px');
+	dropdown_buildings_selection.style('height', '250px');
 	// create options
 	for(var i = 0; i < list_buildings_id.length; i++) {
 		dropdown_buildings_selection.option('b'+String(i));

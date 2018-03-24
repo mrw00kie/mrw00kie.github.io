@@ -56,9 +56,13 @@ function getAvalibleBuildings()
 			}
 		}
 
-		if(isAllreadyResearched != true) {
+
+		if(isAllreadyBuild != true) {
 			var _buildingdepends = xml_building_tree[i].getChildren('depends');
 			var _dependsDone = 0;
+
+			//console.log(xml_building_tree);
+
 			for(var j = 0; j < _buildingdepends.length; j++) {
 				for(var k = 0; k < list_completed_buildings.length; k++) {
 					if(list_completed_buildings[k] == _buildingdepends[j].getContent()) {
