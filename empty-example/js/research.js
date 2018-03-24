@@ -26,6 +26,7 @@ function research_object() {
 				// TODO: UPDATE TECH-TREE ETC...
 				getAvalibleResearch();
 				update_research_selection();
+				getAvalibleBuildings();
 
 				document.getElementById("element_research_bttn").innerHTML = "Start Research";
 			}
