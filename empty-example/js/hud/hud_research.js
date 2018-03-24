@@ -91,7 +91,6 @@ function research_start()
 	for(var i = 0; i < 6; i++) {
 		if(selected_ == list_research_id[i]) {
 			// Start RESEARCH
-			console.log(String(selected_) + " was started and costs " + String(list_research_cost[i]));
 			game_research.setResearch(String(selected_), list_research_cost[i]);
 			return true;
 		}

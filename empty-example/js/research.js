@@ -30,7 +30,6 @@ function research_object() {
 				document.getElementById("element_research_bttn").innerHTML = "Start Research";
 			}
 			else {
-				console.log(this.currentResearch);
 				document.getElementById("element_research_bttn").innerHTML = this.getTimeLeft();
 			}
 		}

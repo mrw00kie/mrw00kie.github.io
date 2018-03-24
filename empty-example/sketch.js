@@ -73,8 +73,13 @@ function setup() {
 	setup_notifications_box();
 	update_notification_text();
 
-	update_navigation_bar();
+	setup_building_selection();
 
+
+
+	update_navigation_bar();
+	update_navigation_selection();
+	
 	sat = 0;
 	mode = false;
 }

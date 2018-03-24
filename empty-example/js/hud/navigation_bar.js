@@ -41,10 +41,12 @@ function update_navigation_selection() {
 		// show right element
 		element_research_box.show();
 		// hide other elements ..
+		element_buildings_box.hide();
 
 	}
 	if(selected_ == 'dropdown_navigation_buildings') {
 		// show right element
+		element_buildings_box.show();		
 		// hide other elements ..
 		element_research_box.hide();
 	}
@@ -52,15 +54,20 @@ function update_navigation_selection() {
 		// show right element
 		// hide other elements ..
 		element_research_box.hide();
+		element_buildings_box.hide();
 	}
 	if(selected_ == 'dropdown_navigation_materials') {
 		// show right element
 		// hide other elements ..
 		element_research_box.hide();
+		element_buildings_box.hide();
+
 	}
 	if(selected_ == 'dropdown_navigation_none') {
 		// show right element
 		// hide other elements ..
 		element_research_box.hide();
+		element_buildings_box.hide();
+
 	}
 }
