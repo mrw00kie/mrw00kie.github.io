@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<building name="TEST_BUILDING">
-	<cost>50</cost>
+<building name="FACTORY">
+	<cost>10</cost>
+</building>
+<building name="UNIVERSITY">
+	<cost>10</cost>
+</building>
+<building name="MILITARY_BASE">
+	<cost>10</cost>
+</building>
+
+<building name="SPACESHIP_FACTORY">
+	<cost>30</cost>
+	<depends>FACTORY</depends>
+</building>
+<building name="HIGHTECH_LAB">
+	<cost>30</cost>
+	<depends>UNIVERSITY</depends>
+</building>
+<building name="AIRBAISE">
+	<cost>30</cost>
+	<depends>UNIVERSITY</depends>
+	<depends>MILITARY_BASE</depends>
+</building>
+
+<building name="ANTIMATTER_POWEPLANT">
+	<cost>90</cost>
+	<depends>SPACESHIP_FACTORY</depends>
+</building>
+<building name="SPACE_CENTER">
+	<cost>90</cost>
+	<depends>HIGHTECH_LAB</depends>
+	<depends>SPACESHIP_FACTORY</depends>
+</building>
+<building name="MILITARY_LAB">
+	<cost>90</cost>
+	<depends>MILITARY_BASE</depends>
+	<depends>HIGHTECH_LAB</depends>
 </building>
