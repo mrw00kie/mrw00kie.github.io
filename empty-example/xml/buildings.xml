@@ -1,5 +1,6 @@
 production_cost<?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Infinitely Expandable -->
 <building name="FACTORY">
 	<production_cost>10</production_cost>
 	<money_cost>2</money_cost>
