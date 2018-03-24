@@ -67,19 +67,20 @@ function setup() {
 	recource_materials = 2;
 
 
+	// Research Window setup
 	getAvalibleResearch();
 	setup_research_selection();
-
+	// Notification Bar setup
 	setup_notifications_box();
 	update_notification_text();
-
+	// Building Window setup
 	setup_building_selection();
-
-
-
+	// Navigation Bar setup
+	create_navigation_bar();
 	update_navigation_bar();
 	update_navigation_selection();
-	
+
+	// Debug Values
 	sat = 0;
 	mode = false;
 }
@@ -94,6 +95,7 @@ function draw()  {
 	// 60 - times per second
 	can.background(sat, 0, 50);
 
+	// Debug Stuff
 	if(mode)
 		sat--;
 	else

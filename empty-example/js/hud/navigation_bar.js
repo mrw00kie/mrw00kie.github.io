@@ -7,8 +7,10 @@ function update_navigation_bar() {
 	document.getElementById("navigation_production_value").innerHTML = String(game_productuion.productionRate);
 	document.getElementById("navigation_power_value").innerHTML = String(recource_power);
 	document.getElementById("navigation_materials_value").innerHTML = String(recource_materials);
+}
 
-
+function create_navigation_bar()
+{
 	dropdown_navigation_selection = createSelect();
 	dropdown_navigation_selection.parent('navigation_bar');
 	dropdown_navigation_selection.style('position', 'relative');
@@ -46,7 +48,7 @@ function update_navigation_selection() {
 	}
 	if(selected_ == 'dropdown_navigation_buildings') {
 		// show right element
-		element_buildings_box.show();		
+		element_buildings_box.show();
 		// hide other elements ..
 		element_research_box.hide();
 	}
