@@ -27,6 +27,7 @@ function research_object() {
 				getAvalibleResearch();
 				update_research_selection();
 				getAvalibleBuildings();
+				update_Buildings_select();
 
 				document.getElementById("element_research_bttn").innerHTML = "Start Research";
 			}
