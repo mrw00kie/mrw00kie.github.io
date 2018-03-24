@@ -6,6 +6,9 @@ var list_research_cost;
 
 var xml;
 var xml_technologie_tree;
+var xml2;
+var xml_building_tree;
+
 
 // Notifications Box Variables
 var list_notifications_text;
@@ -16,6 +19,7 @@ var recource_power;
 var recource_materials;
 
 // Production Variables
+var list_buildings_id;
 
 // Game Variables
 var game_research;
@@ -26,7 +30,9 @@ function getSystemTime() { return (int)(millis() / 1000); }
 
 
 function preload() {
-	xml = loadXML('xml/technologie.xml');
+	xml =  loadXML('xml/technologie.xml');
+	xml2 = loadXML('xml/buildings.xml');
+
 }
 
 
@@ -36,6 +42,8 @@ var mode;
 
 function setup() {
 	xml_technologie_tree = xml.getChildren('tech');
+	xml_building_tree = xml2.getChildren('building');
+
 
 	can = createCanvas(1280, 720);
 	can.parent('game');
@@ -51,6 +59,12 @@ function setup() {
 		list_research_info[i] = "";
 		list_research_cost[i] = 0;
 	}
+
+	// Buildings Variables
+	list_buildings_id = new Array();
+	// // DEBUG: TEST BUILDINGS
+	list_buildings_id.push("abc_0");
+	list_buildings_id.push("test_1");
 
 	// Notifications Box Variables
 	list_notifications_text = new Array();
@@ -74,6 +88,7 @@ function setup() {
 	setup_notifications_box();
 	update_notification_text();
 	// Building Window setup
+	getAvalibleBuildings();
 	setup_building_selection();
 	// Navigation Bar setup
 	create_navigation_bar();
