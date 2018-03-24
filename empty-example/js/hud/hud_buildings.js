@@ -84,6 +84,7 @@ function building_start()
 	for(var i = 0; i < list_buildings_id.length; i++) {
 		if(selected_ == list_buildings_id[i] && list_buildings_money_cost[i] <= recource_money)
 		{
+			update_navigation_bar();
 			recource_money -= list_buildings_money_cost[i];
 			game_productuion.setConstruction(String(selected_), list_buildings_production_cost[i]);
 			return true;

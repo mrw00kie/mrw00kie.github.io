@@ -17,7 +17,10 @@ function productuion_object() {
 			if(this.currentConstruction <= 0) {
 				// NOTIFY PLAYER
 				list_notifications_text.push("Construction for "+this.currentConstructionID+" has finished!");
-				// Construction is done
+				// TODO: APPLY BUILDING EFFECTS
+				// Update Navigation-Bar
+				update_navigation_bar();
+				// Reset Variables
 				list_completed_buildings.push(this.currentConstructionID);
 				this.currentConstructionID = "";
 				this.currentConstruction = 0;
@@ -59,9 +62,19 @@ function getAvalibleBuildings()
 
 		if(isAllreadyBuild != true) {
 			var _buildingdepends = xml_building_tree[i].getChildren('depends');
+			var _siencedepends = xml_building_tree[i].getChildren('depends_sience');
 			var _dependsDone = 0;
+			var _scienceDependsDone = 0;
 
 			//console.log(xml_building_tree);
+
+			for(var j = 0; j < _siencedepends.length; j++) {
+				for(var k = 0; k < list_completed_research.length; k++) {
+					if(list_completed_research[k] == _siencedepends[j].getContent()) {
+						_scienceDependsDone++;
+					}
+				}
+			}
 
 			for(var j = 0; j < _buildingdepends.length; j++) {
 				for(var k = 0; k < list_completed_buildings.length; k++) {
@@ -70,7 +83,7 @@ function getAvalibleBuildings()
 					}
 				}
 			}
-			if(_dependsDone == _buildingdepends.length) {
+			if(_dependsDone == _buildingdepends.length && _scienceDependsDone == _siencedepends.length) {
 				list_buildings_id.push(_buildingname);
 				list_buildings_production_cost.push(parseInt(xml_building_tree[i].getChildren('production_cost')[0].getContent(),10));
 				list_buildings_money_cost.push(parseInt(xml_building_tree[i].getChildren('money_cost')[0].getContent(), 10));

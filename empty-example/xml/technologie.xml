@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <technologies>
 	<!-- Infinitely Expandable -->
-	
+
 	<!-- FIRST ROW -->
 	<tech name="ION_DRIVE">
 		<description>The ION Drive is an advanced thruster that uses charged particles insted of solid/liquid fuel.</description>
