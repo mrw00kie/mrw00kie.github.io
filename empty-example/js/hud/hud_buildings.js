@@ -35,6 +35,7 @@ function setup_building_selection()
 	dropdown_buildings_selection.parent('element_buildings_box');
 	dropdown_buildings_selection.style('position', 'relative');
 	dropdown_buildings_selection.style('top', '40px');
+	dropdown_buildings_selection.style('right', '10px');
 	dropdown_buildings_selection.style('width', '330px');
 	dropdown_buildings_selection.style('height', '260px');
 	// create options
@@ -60,6 +61,7 @@ function update_Buildings_select()
 	dropdown_buildings_selection.parent('element_buildings_box');
 	dropdown_buildings_selection.style('position', 'relative');
 	dropdown_buildings_selection.style('top', '40px');
+	dropdown_buildings_selection.style('right', '10px');
 	dropdown_buildings_selection.style('width', '330px');
 	dropdown_buildings_selection.style('height', '260px');
 	// create options
@@ -75,12 +77,31 @@ function update_Buildings_select()
 	}
 }
 
-function getAvalibleBuildings()
-{
-
-}
-
 function building_start()
 {
-	console.log("Started Construction");
+	var selected_ = dropdown_buildings_selection.value();
+
+	for(var i = 0; i < list_buildings_id.length; i++) {
+		if(selected_ == list_buildings_id[i] && list_buildings_money_cost[i] <= recource_money)
+		{
+			recource_money -= list_buildings_money_cost[i];
+			game_productuion.setConstruction(String(selected_), list_buildings_production_cost[i]);
+			return true;
+		}
+	}
+	return false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

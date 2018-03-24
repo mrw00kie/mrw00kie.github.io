@@ -19,7 +19,10 @@ var recource_power;
 var recource_materials;
 
 // Production Variables
+var list_completed_buildings;
 var list_buildings_id;
+var list_buildings_production_cost;
+var list_buildings_money_cost;
 
 // Game Variables
 var game_research;
@@ -62,9 +65,9 @@ function setup() {
 
 	// Buildings Variables
 	list_buildings_id = new Array();
-	// // DEBUG: TEST BUILDINGS
-	list_buildings_id.push("abc_0");
-	list_buildings_id.push("test_1");
+	list_buildings_production_cost = new Array();
+	list_buildings_money_cost = new Array();
+	list_completed_buildings = new Array();
 
 	// Notifications Box Variables
 	list_notifications_text = new Array();
@@ -76,7 +79,7 @@ function setup() {
 	game_lastFrame = getSystemTime();
 
 	//setup Recource Variables
-	recource_money = 10;
+	recource_money = 40;
 	recource_power = 2;
 	recource_materials = 2;
 
@@ -106,6 +109,7 @@ function draw()  {
 		// Only once Per Second
 		//console.log(getSystemTime()); // Game Time
 		game_research.updateCurrentResearch();
+		game_productuion.updateCurrentConstruction();
 	}
 	// 60 - times per second
 	can.background(sat, 0, 50);
