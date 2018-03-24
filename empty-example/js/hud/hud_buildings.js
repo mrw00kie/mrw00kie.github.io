@@ -33,13 +33,13 @@ function setup_building_selection()
 	dropdown_buildings_selection = createSelect(true);
 	dropdown_buildings_selection.id('dropdown_buildings_selection');
 	dropdown_buildings_selection.parent('element_buildings_box');
-	dropdown_research_selection.style('position', 'relative');
-	dropdown_research_selection.style('top', '40px');
-	dropdown_research_selection.style('width', '330px');
-	dropdown_research_selection.style('height', '260px');
+	dropdown_buildings_selection.style('position', 'relative');
+	dropdown_buildings_selection.style('top', '40px');
+	dropdown_buildings_selection.style('width', '330px');
+	dropdown_buildings_selection.style('height', '260px');
 	// create options
 	for(var i = 0; i < list_buildings_id.length; i++) {
-		dropdown_research_selection.option('b'+String(i));
+		dropdown_buildings_selection.option('b'+String(i));
 	}
 	// give options ID and Values ...
 	var dropd = document.getElementById("dropdown_buildings_selection");
@@ -58,13 +58,13 @@ function update_Buildings_select()
 	dropdown_buildings_selection = createSelect(true);
 	dropdown_buildings_selection.id('dropdown_buildings_selection');
 	dropdown_buildings_selection.parent('element_buildings_box');
-	dropdown_research_selection.style('position', 'relative');
-	dropdown_research_selection.style('top', '40px');
-	dropdown_research_selection.style('width', '330px');
-	dropdown_research_selection.style('height', '260px');
+	dropdown_buildings_selection.style('position', 'relative');
+	dropdown_buildings_selection.style('top', '40px');
+	dropdown_buildings_selection.style('width', '330px');
+	dropdown_buildings_selection.style('height', '260px');
 	// create options
 	for(var i = 0; i < list_buildings_id.length; i++) {
-		dropdown_research_selection.option('b'+String(i));
+		dropdown_buildings_selection.option('b'+String(i));
 	}
 	// give options ID and Values ...
 	var dropd = document.getElementById("dropdown_buildings_selection");
