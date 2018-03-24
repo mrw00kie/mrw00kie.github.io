@@ -24,8 +24,8 @@ function productuion_object() {
 				// Update construction tree
 				getAvalibleBuildings();
 				update_Buildings_select();
+				document.getElementById("element_buildings_bttn").innerHTML = "Start Construction";
 			}
-			document.getElementById("element_buildings_bttn").innerHTML = "Start Construction";
 			else {
 				document.getElementById("element_buildings_bttn").innerHTML = this.getTimeLeft();
 			}
