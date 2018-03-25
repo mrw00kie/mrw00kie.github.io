@@ -24,6 +24,11 @@ var list_buildings_id;
 var list_buildings_production_cost;
 var list_buildings_money_cost;
 
+// unit Variables
+var list_unit_id;
+var list_unit_production_cost;
+var list_unit_money_cost;
+
 // Game Variables
 var game_research;
 var game_productuion;
@@ -69,6 +74,19 @@ function setup() {
 	list_buildings_money_cost = new Array();
 	list_completed_buildings = new Array();
 
+	// Unit Variables
+	list_unit_id = new Array();
+	list_unit_production_cost = new Array();
+	list_unit_money_cost = new Array();
+	//// DEBUG:
+	list_unit_id.push("SOILDER");
+	list_unit_production_cost.push(10);
+	list_unit_money_cost.push(5);
+	list_unit_id.push("TANK");
+	list_unit_production_cost.push(20);
+	list_unit_money_cost.push(10);
+
+
 	// Notifications Box Variables
 	list_notifications_text = new Array();
 	list_notifications_text.push("Welcome! Lead your Civilizastion to great power.");
@@ -93,6 +111,9 @@ function setup() {
 	// Building Window setup
 	getAvalibleBuildings();
 	setup_building_selection();
+	// Units Window setup
+	// TODO: get avalible Units
+	setup_unit_selection();
 	// Navigation Bar setup
 	create_navigation_bar();
 	update_navigation_bar();
