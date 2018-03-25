@@ -44,8 +44,7 @@ function update_navigation_selection() {
 		element_research_box.show();
 		// hide other elements ..
 		element_buildings_box.hide();
-
-
+		element_unit_box.hide();
 	}
 	if(selected_ == 'dropdown_navigation_buildings') {
 		// show right element
