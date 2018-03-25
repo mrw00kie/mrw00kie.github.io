@@ -5,10 +5,12 @@
 	<building name="FACTORY">
 		<production_cost>10</production_cost>
 		<money_cost>2</money_cost>
+		<reward_production>2</reward_production>
 	</building>
 	<building name="UNIVERSITY">
 		<production_cost>10</production_cost>
 		<money_cost>2</money_cost>
+		<reward_research>2</reward_research>
 	</building>
 	<building name="MILITARY_BASE">
 		<production_cost>10</production_cost>
@@ -20,12 +22,14 @@
 		<money_cost>4</money_cost>
 		<depends>FACTORY</depends>
 		<depends_sience>ADVANCED_ROCKETRY</depends_sience>
+		<reward_production>4</reward_production>
 	</building>
 	<building name="HIGHTECH_LAB">
 		<production_cost>30</production_cost>
 		<money_cost>4</money_cost>
 		<depends>UNIVERSITY</depends>
 		<depends_sience>QUANTUM_COMPUTERS</depends_sience>
+		<reward_research>2</reward_research>
 	</building>
 	<building name="AIRBAISE">
 		<production_cost>30</production_cost>
@@ -39,6 +43,7 @@
 		<money_cost>8</money_cost>
 		<depends>SPACESHIP_FACTORY</depends>
 		<depends_sience>ANTI_MATTER</depends_sience>
+		<reward_power>10</reward_power>
 	</building>
 	<building name="SPACE_CENTER">
 		<production_cost>90</production_cost>
@@ -53,5 +58,6 @@
 		<depends>MILITARY_BASE</depends>
 		<depends>HIGHTECH_LAB</depends>
 		<depends_sience>ARTIFICAL_INTELLIGENCE</depends_sience>
+		<reward_research>4</reward_research>
 	</building>
 </allbuilds>

@@ -18,6 +18,26 @@ function productuion_object() {
 				// NOTIFY PLAYER
 				list_notifications_text.push("Construction for "+this.currentConstructionID+" has finished!");
 				// TODO: APPLY BUILDING EFFECTS
+				//	<reward_power></reward_power>
+				//	<reward_research></reward_research>
+				//	<reward_production></reward_production>
+
+				for(var i = 0; i < xml_building_tree.length; i++) {
+					if(xml_building_tree[i].getString('name') == this.currentConstructionID) {
+						var reward_power = xml_building_tree[i].getChildren('reward_power')[0].getContent();
+						var reward_research = xml_building_tree[i].getChildren('reward_research')[0].getContent();
+						var reward_production = xml_building_tree[i].getChildren('reward_production')[0].getContent();
+
+						if(reward_power != undefined || reward_power != "")
+							recource_power += parseInt(reward_power, 10);
+						if(reward_research != undefined || reward_research != "")
+							game_research.researchRate += parseInt(reward_research, 10);
+						if(reward_production != undefined || reward_production != "")
+							this.productionRate += parseInt(reward_production, 10);
+
+					}
+				}
+
 				// Update Navigation-Bar
 				update_navigation_bar();
 				// Reset Variables
