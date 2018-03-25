@@ -84,9 +84,9 @@ function training_start()
 	for(var i = 0; i < list_unit_id.length; i++) {
 		if(selected_ == list_unit_id[i] && list_unit_money_cost[i] <= recource_money)
 		{
-			update_navigation_bar();
 			recource_money -= list_unit_money_cost[i];
 			list_build_units.push(list_unit_id[i]);
+			update_navigation_bar();
 			return true;
 		}
 	}
