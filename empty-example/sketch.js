@@ -26,8 +26,8 @@ var list_buildings_money_cost;
 
 // unit Variables
 var list_unit_id;
-var list_unit_production_cost;
 var list_unit_money_cost;
+var list_build_units;
 
 // Game Variables
 var game_research;
@@ -76,14 +76,12 @@ function setup() {
 
 	// Unit Variables
 	list_unit_id = new Array();
-	list_unit_production_cost = new Array();
 	list_unit_money_cost = new Array();
+	list_build_units = new Array();
 	//// DEBUG:
 	list_unit_id.push("SOILDER");
-	list_unit_production_cost.push(10);
 	list_unit_money_cost.push(5);
 	list_unit_id.push("TANK");
-	list_unit_production_cost.push(20);
 	list_unit_money_cost.push(10);
 
 

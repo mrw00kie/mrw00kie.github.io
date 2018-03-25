@@ -79,14 +79,14 @@ function update_Unit_select()
 
 function training_start()
 {
-	var selected_ = dropdown_buildings_selection.value();
+	var selected_ = dropdown_unit_selection.value();
 
-	for(var i = 0; i < list_buildings_id.length; i++) {
-		if(selected_ == list_buildings_id[i] && list_buildings_money_cost[i] <= recource_money)
+	for(var i = 0; i < list_unit_id.length; i++) {
+		if(selected_ == list_unit_id[i] && list_unit_money_cost[i] <= recource_money)
 		{
 			update_navigation_bar();
-			recource_money -= list_buildings_money_cost[i];
-			game_productuion.setConstruction(String(selected_), list_buildings_production_cost[i]);
+			recource_money -= list_unit_money_cost[i];
+			list_build_units.push(list_unit_id[i]);
 			return true;
 		}
 	}
